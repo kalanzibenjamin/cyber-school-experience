@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Guidelines - Cyber School Experience</title>
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    
+    <style>
+        /* ============================================================
+           CHAT GUIDELINES PAGE STYLES
+           ============================================================ */
+        
+        /* ----- TOP BANNER ----- */
+        .top-banner {
+            background: var(--banner-bg);
+            color: var(--banner-text);
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.2px;
+            border-bottom: 2px solid var(--whatsapp);
+            position: relative;
+            z-index: 20;
+        }
+
+        .top-banner a {
+            color: var(--banner-link);
+            font-weight: 600;
+            margin: 0 4px;
+            border-bottom: 1px dotted rgba(139, 184, 255, 0.4);
+            transition: color var(--transition);
+        }
+
+        .top-banner a:hover {
+            color: var(--text-inverse);
+        }
+
+        /* ----- PAGE SHELL ----- */
+        .page-shell {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 40px 40px 60px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .page-grid {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        /* ----- SIDEBAR ----- */
+        .sidebar {
+            position: sticky;
+            top: 100px;
+        }
+
+        .sidebar-card {
+            background: var(--surface-glass);
+            border-radius: var(--radius);
+            border: 1px solid var(--border-glass);
+            padding: 28px 24px;
+            backdrop-filter: blur(12px) saturate(140%);
+            -webkit-backdrop-filter: blur(12px) saturate(140%);
+            box-shadow: 0 20px 45px -28px rgba(15, 23, 42, 0.35);
+        }
+
+        .sidebar-card .sidebar-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), #4f8ff7);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin: 0 auto 16px;
+            box-shadow: 0 12px 30px -16px rgba(42, 125, 225, 0.45);
+        }
+
+        .sidebar-card h3 {
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .sidebar-card .sidebar-role {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 16px;
+        }
+
+        .sidebar-card .sidebar-bio {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .sidebar-card .sidebar-divider {
+            height: 1px;
+            background: var(--border-glass);
+            margin: 16px 0;
+        }
+
+        .sidebar-card .sidebar-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .sidebar-card .sidebar-links a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all var(--transition);
+        }
+
+        .sidebar-card .sidebar-links a:hover {
+            background: var(--accent-soft);
+            color: var(--accent);
+            transform: translateX(2px);
+        }
+
+        .sidebar-card .sidebar-links a:hover i {
+            color: var(--accent);
+        }
+
+        .sidebar-card .sidebar-links a.active {
+            background: var(--accent-soft);
+            color: var(--accent);
+            box-shadow: inset 0 0 0 1px rgba(42, 125, 225, 0.16);
+        }
+
+        .sidebar-card .sidebar-links a.active i {
+            color: var(--accent);
+        }
+
+        .sidebar-card .sidebar-links a i {
+            width: 20px;
+            color: var(--text-light);
+            transition: color var(--transition);
+        }
+
+        /* ----- CONTENT CARD ----- */
+        .content-card {
+            background: var(--surface-glass);
+            border-radius: var(--radius);
+            border: 1px solid var(--border-glass);
+            padding: 40px 44px;
+            backdrop-filter: blur(12px) saturate(140%);
+            -webkit-backdrop-filter: blur(12px) saturate(140%);
+        }
+
+        .content-card .page-header-simple {
+            margin-bottom: 28px;
+        }
+
+        .content-card .page-header-simple .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent-soft);
+            padding: 4px 16px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: var(--accent);
+            border: 1px solid var(--badge-border);
+            margin-bottom: 12px;
+        }
+
+        .content-card h1 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+
+        .content-card h1 i {
+            color: var(--whatsapp);
+            margin-right: 10px;
+        }
+
+        .content-card .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .content-card p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        /* ----- GUIDELINES LIST ----- */
+        .guidelines-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin: 20px 0 24px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .guidelines-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 16px 20px;
+            background: var(--surface);
+            border-radius: 12px;
+            border: 1px solid var(--border-glass);
+            transition: all var(--transition);
+        }
+
+        .guidelines-list li:hover {
+            transform: translateX(4px);
+            background: var(--surface-glass-hover);
+        }
+
+        .guidelines-list li .rule-icon {
+            flex-shrink: 0;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--whatsapp);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            margin-top: 2px;
+        }
+
+        .guidelines-list li .rule-content {
+            flex: 1;
+        }
+
+        .guidelines-list li .rule-content strong {
+            display: block;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 2px;
+        }
+
+        .guidelines-list li .rule-content span {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* ----- DO & DON'T SECTION ----- */
+        .dos-donts {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0 8px;
+        }
+
+        .dos-donts .do-section,
+        .dos-donts .dont-section {
+            padding: 20px 24px;
+            border-radius: 12px;
+            border: 1px solid var(--border-glass);
+        }
+
+        .dos-donts .do-section {
+            background: rgba(16, 185, 129, 0.06);
+            border-color: rgba(16, 185, 129, 0.20);
+        }
+
+        .dos-donts .dont-section {
+            background: rgba(239, 68, 68, 0.06);
+            border-color: rgba(239, 68, 68, 0.20);
+        }
+
+        .dos-donts .do-section h4 {
+            color: #059669;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .dos-donts .dont-section h4 {
+            color: #dc2626;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .dos-donts ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .dos-donts ul li {
+            padding: 4px 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .dos-donts ul li i {
+            font-size: 0.7rem;
+        }
+
+        .dos-donts .do-section ul li i {
+            color: #059669;
+        }
+
+        .dos-donts .dont-section ul li i {
+            color: #dc2626;
+        }
+
+        /* ----- BACK LINK ----- */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--accent);
+            background: var(--accent-soft);
+            transition: all var(--transition);
+            text-decoration: none;
+            margin-top: 8px;
+        }
+
+        .back-link:hover {
+            background: var(--accent);
+            color: #fff;
+            transform: translateX(-4px);
+        }
+
+        .back-link i {
+            transition: transform var(--transition);
+        }
+
+        .back-link:hover i {
+            transform: translateX(-4px);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .page-shell {
+                padding: 30px 24px 40px;
+            }
+
+            .page-grid {
+                grid-template-columns: 240px 1fr;
+                gap: 28px;
+            }
+
+            .content-card h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-shell {
+                padding: 20px 16px 32px;
+            }
+
+            .page-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            .sidebar-card {
+                padding: 20px 16px;
+            }
+
+            .sidebar-card .sidebar-avatar {
+                width: 64px;
+                height: 64px;
+                font-size: 2rem;
+            }
+
+            .content-card {
+                padding: 24px 20px;
+            }
+
+            .content-card h1 {
+                font-size: 1.6rem;
+            }
+
+            .content-card .subtitle {
+                font-size: 0.95rem;
+            }
+
+            .guidelines-list li {
+                padding: 14px 16px;
+            }
+
+            .dos-donts {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .dos-donts .do-section,
+            .dos-donts .dont-section {
+                padding: 16px 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-shell {
+                padding: 16px 12px 24px;
+            }
+
+            .content-card {
+                padding: 18px 14px;
+            }
+
+            .content-card h1 {
+                font-size: 1.3rem;
+            }
+
+            .guidelines-list li {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+                padding: 14px;
+            }
+
+            .guidelines-list li .rule-icon {
+                width: 30px;
+                height: 30px;
+                font-size: 0.75rem;
+            }
+
+            .top-banner {
+                font-size: 0.8rem;
+                padding: 8px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== TOP BANNER ===== -->
+    <div class="top-banner">
+        <i class="fas fa-bullhorn"></i>
+        Welcome to Cyber School Experience Community —
+        <a href="index.html">Join your class WhatsApp group</a>
+        <i class="fas fa-arrow-right" style="margin-left: 6px;"></i>
+    </div>
+
+    <!-- ===== HEADER ===== -->
+    <div data-include="../../components/header.html"></div>
+
+    <!-- ===== MAIN ===== -->
+    <main class="page-shell page-grid">
+        
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar">
+            <div class="sidebar-card glass-card">
+                <div class="sidebar-avatar"><i class="fab fa-whatsapp"></i></div>
+                <h3>Chat Guidelines</h3>
+                <div class="sidebar-role">Community Standards</div>
+                <div class="sidebar-bio">
+                    Help us keep our WhatsApp groups safe, respectful, and helpful for everyone.
+                </div>
+                <div class="sidebar-divider"></div>
+                <div class="sidebar-links">
+                    <a href="index.html">
+                        <i class="fas fa-comments"></i> Find Chats
+                    </a>
+                    <a href="guidelines.html" class="active">
+                        <i class="fas fa-gavel"></i> Guidelines
+                    </a>
+                    <a href="../about/">
+                        <i class="fas fa-info-circle"></i> About
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ===== CONTENT ===== -->
+        <section class="content-card">
+            <div class="page-header-simple">
+                <span class="badge"><i class="fas fa-gavel"></i> Community Standards</span>
+                <h1><i class="fab fa-whatsapp"></i>Chat Etiquette &amp; Rules</h1>
+                <p class="subtitle">Guidelines to ensure a positive and productive learning environment for all.</p>
+            </div>
+
+            <p>
+                Our WhatsApp groups are designed to be safe, supportive spaces for Nursing (CN) and 
+                Midwifery (CM) students. By following these simple guidelines, we can all contribute 
+                to a positive learning community.
+            </p>
+
+            <!-- ===== GUIDELINES LIST ===== -->
+            <ul class="guidelines-list">
+                <li>
+                    <div class="rule-icon"><i class="fas fa-handshake"></i></div>
+                    <div class="rule-content">
+                        <strong>Be Respectful and Inclusive</strong>
+                        <span>Treat every member with kindness and respect. We're all here to learn and grow together.</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="rule-icon"><i class="fas fa-share-alt"></i></div>
+                    <div class="rule-content">
+                        <strong>Share Helpful Information</strong>
+                        <span>Contribute useful resources, study tips, and relevant announcements. Avoid spam or unrelated content.</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="rule-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="rule-content">
+                        <strong>Keep Discussions Relevant</strong>
+                        <span>Stay on topic. Focus on academic support, learning resources, and community building.</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="rule-icon"><i class="fas fa-lock"></i></div>
+                    <div class="rule-content">
+                        <strong>Protect Privacy</strong>
+                        <span>Do not share personal contact details publicly. Respect the privacy of all group members.</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="rule-icon"><i class="fas fa-clock"></i></div>
+                    <div class="rule-content">
+                        <strong>Be Considerate of Time</strong>
+                        <span>Post during reasonable hours and avoid excessive messaging that might overwhelm others.</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="rule-icon"><i class="fas fa-flag"></i></div>
+                    <div class="rule-content">
+                        <strong>Report Issues</strong>
+                        <span>If you see inappropriate behavior, notify the group moderators or admins immediately.</span>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- ===== DO & DON'T ===== -->
+            <div class="dos-donts">
+                <div class="do-section">
+                    <h4><i class="fas fa-check-circle"></i> Do's</h4>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Ask questions and share knowledge</li>
+                        <li><i class="fas fa-check"></i> Encourage and support fellow students</li>
+                        <li><i class="fas fa-check"></i> Share helpful study materials</li>
+                        <li><i class="fas fa-check"></i> Use clear and respectful language</li>
+                        <li><i class="fas fa-check"></i> Reach out to moderators for help</li>
+                    </ul>
+                </div>
+                <div class="dont-section">
+                    <h4><i class="fas fa-times-circle"></i> Don'ts</h4>
+                    <ul>
+                        <li><i class="fas fa-times"></i> Don't share spam or promotional content</li>
+                        <li><i class="fas fa-times"></i> Don't bully or harass others</li>
+                        <li><i class="fas fa-times"></i> Don't share exam answers (integrity matters)</li>
+                        <li><i class="fas fa-times"></i> Don't post personal contact info publicly</li>
+                        <li><i class="fas fa-times"></i> Don't send irrelevant or off-topic messages</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p style="margin-top: 20px;">
+                <strong>Remember:</strong> These groups are here to help you succeed. By following these 
+                guidelines, you contribute to a positive and productive learning environment for everyone.
+            </p>
+
+            <!-- ===== BACK LINK ===== -->
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Chats
+            </a>
+
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <div data-include="../../components/footer.html"></div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="../../assets/js/include.js"></script>
+    <script src="../../assets/js/main.js"></script>
+
+    <script>
+        (function() {
+            'use strict';
+
+            // ===== SIDEBAR NAVIGATION =====
+            const sidebarLinks = document.querySelectorAll('.sidebar-links a');
+            
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    sidebarLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // ===== HIGHLIGHT ACTIVE PAGE =====
+            const currentPath = window.location.pathname;
+            const pageName = currentPath.split('/').pop() || 'guidelines.html';
+            
+            sidebarLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === pageName || (pageName === 'guidelines.html' && href === 'guidelines.html')) {
+                    link.classList.add('active');
+                }
+            });
+
+            console.log('📋 Chat Guidelines page loaded');
+        })();
+    </script>
+
+</body>
+</html>

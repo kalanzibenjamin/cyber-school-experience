@@ -1,0 +1,139 @@
+{
+  "team": [
+    {
+      "id": 1,
+      "name": "Dr. Adebayo Ogunleye",
+      "role": "Program Director",
+      "department": "Academic Leadership",
+      "bio": "Dr. Ogunleye has over 15 years of experience in computer science education and leads the Cyber School Experience program with a vision for collaborative digital learning.",
+      "email": "a.ogunleye@cyberschool.edu",
+      "social": {
+        "linkedin": "#",
+        "twitter": "#"
+      },
+      "image": "/assets/images/team/adebayo-ogunleye.jpg",
+      "order": 1,
+      "active": true
+    },
+    {
+      "id": 2,
+      "name": "Prof. Chioma Eze",
+      "role": "Head of Academics",
+      "department": "Academic Leadership",
+      "bio": "Prof. Eze is a seasoned educator specializing in curriculum development and academic excellence. She oversees all academic programs and ensures quality standards.",
+      "email": "c.eze@cyberschool.edu",
+      "social": {
+        "linkedin": "#",
+        "twitter": "#"
+      },
+      "image": "/assets/images/team/chioma-eze.jpg",
+      "order": 2,
+      "active": true
+    },
+    {
+      "id": 3,
+      "name": "Engr. Michael Okonkwo",
+      "role": "Head Tutor - CN",
+      "department": "Tutoring",
+      "bio": "Engr. Okonkwo is a network engineer with 8 years of industry experience. He leads the CN tutoring team and specializes in networking and cybersecurity.",
+      "email": "m.okonkwo@cyberschool.edu",
+      "social": {
+        "linkedin": "#",
+        "twitter": "#"
+      },
+      "image": "/assets/images/team/michael-okonkwo.jpg",
+      "order": 3,
+      "active": true
+    },
+    {
+      "id": 4,
+      "name": "Dr. Ngozi Adeyemi",
+      "role": "Head Tutor - CM",
+      "department": "Tutoring",
+      "bio": "Dr. Adeyemi is an expert in communication systems and digital media. She leads the CM tutoring team and brings years of academic and research experience.",
+      "email": "n.adeyemi@cyberschool.edu",
+      "social": {
+        "linkedin": "#",
+        "twitter": "#"
+      },
+      "image": "/assets/images/team/ngozi-adeyemi.jpg",
+      "order": 4,
+      "active": true
+    },
+    {
+      "id": 5,
+      "name": "Mr. Tunde Balogun",
+      "role": "Mathematics Tutor",
+      "department": "Tutoring",
+      "bio": "Mr. Balogun is a mathematics specialist with a passion for making complex concepts easy to understand. He leads the mathematics study group sessions.",
+      "email": "t.balogun@cyberschool.edu",
+      "social": {
+        "linkedin": "#",
+        "twitter": "#"
+      },
+      "image": "/assets/images/team/tunde-balogun.jpg",
+      "order": 5,
+      "active": true
+    },
+    {
+      "id": 6,
+      "name": "Ms. Folake Ogunbiyi",
+      "role": "Student Affairs Coordinator",
+      "department": "Student Support",
+      "bio": "Ms. Ogunbiyi is dedicated to student welfare and engagement. She coordinates all student activities, events, and support services.",
+      "email": "f.ogunbiyi@cyberschool.edu",
+      "social": {
+        "linkedin": "#",
+        "twitter": "#"
+      },
+      "image": "/assets/images/team/folake-ogunbiyi.jpg",
+      "order": 6,
+      "active": true
+    },
+    {
+      "id": 7,
+      "name": "Mr. Chidi Nwachukwu",
+      "role": "IT Support Specialist",
+      "department": "Technical Support",
+      "bio": "Mr. Nwachukwu ensures the smooth operation of all technical platforms. He handles IT support, system maintenance, and technical troubleshooting.",
+      "email": "c.nwachukwu@cyberschool.edu",
+      "social": {
+        "linkedin": "#",
+        "twitter": "#"
+      },
+      "image": "/assets/images/team/chidi-nwachukwu.jpg",
+      "order": 7,
+      "active": true
+    },
+    {
+      "id": 8,
+      "name": "Ms. Amara Okafor",
+      "role": "Content & Resource Manager",
+      "department": "Content Management",
+      "bio": "Ms. Okafor manages all learning resources and study materials. She curates, organizes, and updates the resource library for students.",
+      "email": "a.okafor@cyberschool.edu",
+      "social": {
+        "linkedin": "#",
+        "twitter": "#"
+      },
+      "image": "/assets/images/team/amara-okafor.jpg",
+      "order": 8,
+      "active": true
+    },
+    {
+      "id": 9,
+      "name": "Mr. Kunle Adeosun",
+      "role": "Community Manager",
+      "department": "Community Management",
+      "bio": "Mr. Adeosun manages the WhatsApp community and ensures active engagement across all groups. He facilitates communication and community building.",
+      "email": "k.adeosun@cyberschool.edu",
+      "social": {
+        "linkedin": "#",
+        "twitter": "#"
+      },
+      "image": "/assets/images/team/kunle-adeosun.jpg",
+      "order": 9,
+      "active": true
+    }
+  ]
+}

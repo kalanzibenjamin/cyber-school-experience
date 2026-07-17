@@ -1,0 +1,90 @@
+# ============================================
+# CYBER SCHOOL EXPERIENCE - GitHub Pages Config
+# ============================================
+
+# Site settings
+title: Cyber School Experience
+description: >-
+  A vibrant learning community where students connect, 
+  share resources, and support each other academically.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://github.com/kalanzibenjamin/cyber-school-experience" # the base hostname & protocol for your site
+
+# Repository
+repository: cyberschoolexperience/cyberschoolexperience.github.io
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Exclude from processing
+exclude:
+  - .gitignore
+  - .git/
+  - .github/
+  - .vscode/
+  - node_modules/
+  - README.md
+  - LICENSE
+  - package.json
+  - package-lock.json
+  - yarn.lock
+  - Gemfile
+  - Gemfile.lock
+  - .sass-cache/
+  - .jekyll-cache/
+  - .jekyll-metadata
+  - .DS_Store
+  - .idea/
+  - *.swp
+  - *.swo
+
+# Keep files
+keep_files:
+  - assets/
+  - pages/
+  - data/
+  - components/
+  - CNAME
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+# Permalinks
+permalink: /:categories/:year/:month/:day/:title/
+
+# SASS/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# SEO
+author: Cyber School Experience Team
+twitter:
+  username: cyber school experience
+  card: summary_large_image
+
+# Social links
+social:
+  name: Cyber School Experience
+  links:
+    - https://github.com/cyberschoolexperience
+    - https://chat.whatsapp.com/your-group-link
+
+# Analytics
+# google_analytics: UA-XXXXXXXXX-X
+
+# ============================================
+# NOTE: This file is for GitHub Pages with Jekyll
+# If not using Jekyll, this file can be deleted
+# ============================================

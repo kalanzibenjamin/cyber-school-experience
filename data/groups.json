@@ -1,0 +1,92 @@
+{
+  "groups": [
+    {
+      "id": 1,
+      "title": "1.2 CN/CM",
+      "classCode": "1.2",
+      "description": "First year class group for all CN and CM students",
+      "members": "45+",
+      "link": "https://chat.whatsapp.com/GtU9MeCt5N2H1IUoAkNTLm",
+      "icon": "fa-users",
+      "active": true,
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "2.1 CN/CM – Group A",
+      "classCode": "2.1",
+      "description": "Second year Group A for CN and CM students",
+      "members": "50+",
+      "link": "https://chat.whatsapp.com/GqG0qzcsuR15JOqUOzfg48",
+      "icon": "fa-users",
+      "active": true,
+      "featured": true
+    },
+    {
+      "id": 3,
+      "title": "2.1 CN/CM – Group B",
+      "classCode": "2.1",
+      "description": "Second year Group B for CN and CM students",
+      "members": "48+",
+      "link": "https://chat.whatsapp.com/G4iNeEyFN0ZBOHS6gqCqfN",
+      "icon": "fa-users",
+      "active": true,
+      "featured": false
+    },
+    {
+      "id": 4,
+      "title": "2.2 CN/CM",
+      "classCode": "2.2",
+      "description": "Second year main group for CN and CM students",
+      "members": "55+",
+      "link": "https://chat.whatsapp.com/F1CNn8AOQaU7fzu93mUsb0",
+      "icon": "fa-users",
+      "active": true,
+      "featured": true
+    },
+    {
+      "id": 5,
+      "title": "2.2 CM Only",
+      "classCode": "2.2",
+      "description": "Exclusive group for CM students in second year",
+      "members": "30+",
+      "link": "https://chat.whatsapp.com/LXDdBe1E2xvG9tXEhuhSqe",
+      "icon": "fa-user-graduate",
+      "active": true,
+      "featured": false
+    },
+    {
+      "id": 6,
+      "title": "2.2 CN/CM – Group B",
+      "classCode": "2.2",
+      "description": "Second year Group B for CN and CM students",
+      "members": "52+",
+      "link": "https://chat.whatsapp.com/EJh3qkJdko8BVgVBWRIOLe",
+      "icon": "fa-users",
+      "active": true,
+      "featured": false
+    },
+    {
+      "id": 7,
+      "title": "3.1 CN/CM – Group A",
+      "classCode": "3.1",
+      "description": "Third year Group A for CN and CM students",
+      "members": "60+",
+      "link": "https://chat.whatsapp.com/DD40NDavpgY5NSsmMuAA65",
+      "icon": "fa-users",
+      "active": true,
+      "featured": true
+    },
+    {
+      "id": 8,
+      "title": "3.1 CN/CM – Group B",
+      "classCode": "3.1",
+      "description": "Third year Group B for CN and CM students",
+      "members": "58+",
+      "link": "https://chat.whatsapp.com/LFkqhKTZzYlFxwYYnhRzxJ",
+      "icon": "fa-users",
+      "active": true,
+      "featured": false
+    }
+  ]
+}

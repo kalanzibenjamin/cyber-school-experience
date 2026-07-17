@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team - Cyber School Experience</title>
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    
+    <style>
+        /* ============================================================
+           TEAM PAGE STYLES
+           ============================================================ */
+        
+        /* ----- TOP BANNER ----- */
+        .top-banner {
+            background: var(--banner-bg);
+            color: var(--banner-text);
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.2px;
+            border-bottom: 2px solid var(--whatsapp);
+            position: relative;
+            z-index: 20;
+        }
+
+        .top-banner a {
+            color: var(--banner-link);
+            font-weight: 600;
+            margin: 0 4px;
+            border-bottom: 1px dotted rgba(139, 184, 255, 0.4);
+            transition: color var(--transition);
+        }
+
+        .top-banner a:hover {
+            color: var(--text-inverse);
+        }
+
+        /* ----- PAGE SHELL ----- */
+        .page-shell {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 40px 40px 60px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .page-grid {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        /* ----- SIDEBAR ----- */
+        .sidebar {
+            position: sticky;
+            top: 100px;
+        }
+
+        .sidebar-card {
+            background: var(--surface-glass);
+            border-radius: var(--radius);
+            border: 1px solid var(--border-glass);
+            padding: 28px 24px;
+            backdrop-filter: blur(12px) saturate(140%);
+            -webkit-backdrop-filter: blur(12px) saturate(140%);
+            box-shadow: 0 20px 45px -28px rgba(15, 23, 42, 0.35);
+        }
+
+        .sidebar-card .sidebar-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), #4f8ff7);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin: 0 auto 16px;
+            box-shadow: 0 12px 30px -16px rgba(42, 125, 225, 0.45);
+        }
+
+        .sidebar-card h3 {
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .sidebar-card .sidebar-role {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 16px;
+        }
+
+        .sidebar-card .sidebar-bio {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .sidebar-card .sidebar-divider {
+            height: 1px;
+            background: var(--border-glass);
+            margin: 16px 0;
+        }
+
+        .sidebar-card .sidebar-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .sidebar-card .sidebar-links a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all var(--transition);
+        }
+
+        .sidebar-card .sidebar-links a:hover {
+            background: var(--accent-soft);
+            color: var(--accent);
+            transform: translateX(2px);
+        }
+
+        .sidebar-card .sidebar-links a:hover i {
+            color: var(--accent);
+        }
+
+        .sidebar-card .sidebar-links a.active {
+            background: var(--accent-soft);
+            color: var(--accent);
+            box-shadow: inset 0 0 0 1px rgba(42, 125, 225, 0.16);
+        }
+
+        .sidebar-card .sidebar-links a.active i {
+            color: var(--accent);
+        }
+
+        .sidebar-card .sidebar-links a i {
+            width: 20px;
+            color: var(--text-light);
+            transition: color var(--transition);
+        }
+
+        /* ----- CONTENT CARD ----- */
+        .content-card {
+            background: var(--surface-glass);
+            border-radius: var(--radius);
+            border: 1px solid var(--border-glass);
+            padding: 40px 44px;
+            backdrop-filter: blur(12px) saturate(140%);
+            -webkit-backdrop-filter: blur(12px) saturate(140%);
+        }
+
+        .content-card .page-header-simple {
+            margin-bottom: 28px;
+        }
+
+        .content-card .page-header-simple .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent-soft);
+            padding: 4px 16px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: var(--accent);
+            border: 1px solid var(--badge-border);
+            margin-bottom: 12px;
+        }
+
+        .content-card h1 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+
+        .content-card h1 i {
+            color: var(--accent);
+            margin-right: 10px;
+        }
+
+        .content-card .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .content-card p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        /* ----- TEAM GRID ----- */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+            margin: 20px 0 8px;
+        }
+
+        .team-card {
+            background: var(--surface);
+            border-radius: 16px;
+            border: 1px solid var(--border-glass);
+            padding: 24px 20px;
+            text-align: center;
+            transition: all var(--transition);
+        }
+
+        .team-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+            background: var(--surface-glass-hover);
+        }
+
+        .team-card .team-avatar {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #fff;
+            margin: 0 auto 14px;
+            box-shadow: 0 4px 16px -6px rgba(0, 0, 0, 0.15);
+        }
+
+        .team-card .team-avatar.blue {
+            background: linear-gradient(135deg, #3b82f6, #6366f1);
+        }
+
+        .team-card .team-avatar.green {
+            background: linear-gradient(135deg, #10b981, #34d399);
+        }
+
+        .team-card .team-avatar.purple {
+            background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+        }
+
+        .team-card .team-avatar.orange {
+            background: linear-gradient(135deg, #f59e0b, #fb923c);
+        }
+
+        .team-card .team-avatar.pink {
+            background: linear-gradient(135deg, #ec4899, #f472b6);
+        }
+
+        .team-card .team-avatar.teal {
+            background: linear-gradient(135deg, #14b8a6, #2dd4bf);
+        }
+
+        .team-card .team-avatar.red {
+            background: linear-gradient(135deg, #ef4444, #f87171);
+        }
+
+        .team-card .team-avatar.indigo {
+            background: linear-gradient(135deg, #4f46e5, #818cf8);
+        }
+
+        .team-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 2px;
+        }
+
+        .team-card .team-role {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+
+        .team-card .team-bio {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        /* ----- CONTENT ACTIONS ----- */
+        .content-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 28px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-glass);
+        }
+
+        .content-actions a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 22px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all var(--transition);
+            text-decoration: none;
+        }
+
+        .content-actions a.btn-primary-action {
+            background: var(--accent);
+            color: #fff;
+            box-shadow: 0 4px 12px -4px rgba(42, 125, 225, 0.30);
+        }
+
+        .content-actions a.btn-primary-action:hover {
+            background: var(--accent-hover);
+            transform: scale(1.02);
+        }
+
+        .content-actions a.btn-secondary-action {
+            background: var(--surface-glass);
+            color: var(--text-primary);
+            border: 1px solid var(--border-glass);
+        }
+
+        .content-actions a.btn-secondary-action:hover {
+            background: var(--surface-glass-hover);
+            box-shadow: var(--shadow);
+        }
+
+        /* ----- JOIN TEAM NOTE ----- */
+        .join-note {
+            background: var(--accent-soft);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .join-note i {
+            font-size: 1.2rem;
+            color: var(--accent);
+        }
+
+        .join-note p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .join-note a {
+            color: var(--accent);
+            font-weight: 600;
+            margin-left: 4px;
+        }
+
+        .join-note a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .page-shell {
+                padding: 30px 24px 40px;
+            }
+
+            .page-grid {
+                grid-template-columns: 240px 1fr;
+                gap: 28px;
+            }
+
+            .content-card h1 {
+                font-size: 2rem;
+            }
+
+            .team-grid {
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-shell {
+                padding: 20px 16px 32px;
+            }
+
+            .page-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            .sidebar-card {
+                padding: 20px 16px;
+            }
+
+            .sidebar-card .sidebar-avatar {
+                width: 64px;
+                height: 64px;
+                font-size: 2rem;
+            }
+
+            .content-card {
+                padding: 24px 20px;
+            }
+
+            .content-card h1 {
+                font-size: 1.6rem;
+            }
+
+            .content-card .subtitle {
+                font-size: 0.95rem;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
+            }
+
+            .team-card {
+                padding: 18px 14px;
+            }
+
+            .team-card .team-avatar {
+                width: 56px;
+                height: 56px;
+                font-size: 1.4rem;
+            }
+
+            .team-card h3 {
+                font-size: 0.95rem;
+            }
+
+            .content-actions {
+                flex-direction: column;
+            }
+
+            .content-actions a {
+                justify-content: center;
+            }
+
+            .join-note {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-shell {
+                padding: 16px 12px 24px;
+            }
+
+            .content-card {
+                padding: 18px 14px;
+            }
+
+            .content-card h1 {
+                font-size: 1.3rem;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .top-banner {
+                font-size: 0.8rem;
+                padding: 8px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== TOP BANNER ===== -->
+    <div class="top-banner">
+        <i class="fas fa-bullhorn"></i>
+        Welcome to Cyber School Experience Community —
+        <a href="/pages/chats/">Join your class WhatsApp group</a>
+        <i class="fas fa-arrow-right" style="margin-left: 6px;"></i>
+    </div>
+
+    <!-- ===== HEADER ===== -->
+    <div data-include="/components/header.html"></div>
+
+    <!-- ===== MAIN ===== -->
+    <main class="page-shell page-grid">
+        
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar">
+            <div class="sidebar-card glass-card">
+                <div class="sidebar-avatar">C</div>
+                <h3>Cyber School</h3>
+                <div class="sidebar-role">Experience Community</div>
+                <div class="sidebar-bio">
+                    Empowering Nursing and Midwifery students through collaborative learning and community support.
+                </div>
+                <div class="sidebar-divider"></div>
+                <div class="sidebar-links">
+                    <a href="index.html">
+                        <i class="fas fa-info-circle"></i> About
+                    </a>
+                    <a href="mission.html">
+                        <i class="fas fa-bullseye"></i> Mission
+                    </a>
+                    <a href="team.html" class="active">
+                        <i class="fas fa-users"></i> Team
+                    </a>
+                    <a href="/pages/chats/">
+                        <i class="fab fa-whatsapp"></i> Join a Chat
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ===== CONTENT ===== -->
+        <section class="content-card">
+            <div class="page-header-simple">
+                <span class="badge"><i class="fas fa-users"></i> The People Behind It</span>
+                <h1><i class="fas fa-users"></i>Meet the Team</h1>
+                <p class="subtitle">Passionate individuals dedicated to supporting Nursing and Midwifery students.</p>
+            </div>
+
+            <p>
+                Our team is made up of dedicated students and alumni who understand the challenges 
+                and opportunities of Nursing (CN) and Midwifery (CM) education. We're here to make 
+                your learning journey smoother and more connected.
+            </p>
+
+            <!-- ===== TEAM GRID ===== -->
+            <div class="team-grid">
+                <!-- Team Member 1 -->
+                <div class="team-card">
+                    <div class="team-avatar blue">A</div>
+                    <h3>Amara Okafor</h3>
+                    <div class="team-role">Community Lead</div>
+                    <div class="team-bio">Final year CN student passionate about peer learning and creating supportive study spaces.</div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="team-card">
+                    <div class="team-avatar green">T</div>
+                    <h3>Tunde Adebayo</h3>
+                    <div class="team-role">Study Resources Coordinator</div>
+                    <div class="team-bio">CM graduate compiling and curating study materials to help students excel in their exams.</div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="team-card">
+                    <div class="team-avatar purple">F</div>
+                    <h3>Faith Eze</h3>
+                    <div class="team-role">Group Moderator</div>
+                    <div class="team-bio">CN student keeping WhatsApp groups organized, helpful, and focused on academics.</div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="team-card">
+                    <div class="team-avatar orange">C</div>
+                    <h3>Chioma Nwosu</h3>
+                    <div class="team-role">Clinical Resources Lead</div>
+                    <div class="team-bio">CM student bridging the gap between clinical practice and classroom learning with practical guides.</div>
+                </div>
+
+                <!-- Team Member 5 -->
+                <div class="team-card">
+                    <div class="team-avatar pink">M</div>
+                    <h3>Michael Okonkwo</h3>
+                    <div class="team-role">Tech Support</div>
+                    <div class="team-bio">CN student keeping the platform running smoothly and helping students navigate resources.</div>
+                </div>
+
+                <!-- Team Member 6 -->
+                <div class="team-card">
+                    <div class="team-avatar teal">N</div>
+                    <h3>Ngozi Obi</h3>
+                    <div class="team-role">Announcements Manager</div>
+                    <div class="team-bio">CM student ensuring every student stays informed about deadlines, exams, and campus events.</div>
+                </div>
+            </div>
+
+            <!-- ===== JOIN NOTE ===== -->
+            <div class="join-note">
+                <i class="fas fa-hand-wave"></i>
+                <p>
+                    <strong>Want to contribute?</strong> 
+                    We're always looking for passionate students to join our team. 
+                    <a href="/pages/about/index.html#contact">Get in touch</a> and help us build a stronger community.
+                </p>
+            </div>
+
+            <div class="content-actions">
+                <a href="/pages/about/" class="btn-secondary-action">
+                    <i class="fas fa-info-circle"></i> About Us
+                </a>
+                <a href="/pages/about/mission/" class="btn-secondary-action">
+                    <i class="fas fa-bullseye"></i> Our Mission
+                </a>
+                <a href="/pages/chats/" class="btn-primary-action">
+                    <i class="fab fa-whatsapp"></i> Join a Group
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <div data-include="/components/footer.html"></div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="/assets/js/include.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+    <script>
+        (function() {
+            'use strict';
+
+            // ===== SIDEBAR NAVIGATION =====
+            const sidebarLinks = document.querySelectorAll('.sidebar-links a');
+            
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    sidebarLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // ===== HIGHLIGHT ACTIVE PAGE =====
+            const currentPath = window.location.pathname;
+            const pageName = currentPath.split('/').pop() || 'team.html';
+            
+            sidebarLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === pageName || (pageName === 'team.html' && href === 'team.html')) {
+                    link.classList.add('active');
+                }
+            });
+
+            console.log('👥 Team page loaded — CN (Nursing) & CM (Midwifery)');
+        })();
+    </script>
+
+</body>
+</html>

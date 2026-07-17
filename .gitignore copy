@@ -1,0 +1,208 @@
+# ============================================
+# CYBER SCHOOL EXPERIENCE - .gitignore
+# ============================================
+
+# ===== OS GENERATED FILES =====
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Windows
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+*.swp
+*.swo
+*.swn
+
+# ===== IDE / EDITOR FILES =====
+# Visual Studio Code
+.vscode/
+*.code-workspace
+.vscode-test/
+*.vsix
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+.sublime/
+
+# Atom
+.atom/
+*.atom-project
+
+# WebStorm / IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.idea_modules/
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+.metadata/
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Brackets
+.brackets.json
+
+# ===== BUILD / DEPENDENCY FILES =====
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.python-version
+
+# Ruby
+Gemfile.lock
+.bundle/
+vendor/
+.ruby-version
+
+# ===== TEMPORARY FILES =====
+*.tmp
+*.temp
+*.log
+*.cache
+*.swp
+*.swo
+*.bak
+*.backup
+*.old
+
+# ===== COMPRESSED FILES =====
+*.zip
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+*.bz2
+
+# ===== DATABASE FILES =====
+*.sqlite
+*.db
+*.sql
+*.mdb
+*.accdb
+
+# ===== ENVIRONMENT FILES =====
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+.env.test
+
+# ===== SECURITY FILES =====
+# Sensitive files that should not be committed
+*.pem
+*.key
+*.crt
+*.csr
+*.p12
+*.pfx
+.secrets/
+.credentials/
+*.secret
+
+# ===== TESTING FILES =====
+coverage/
+.nyc_output/
+*.test.js
+*.spec.js
+*.test.ts
+*.spec.ts
+jest.config.js
+karma.conf.js
+
+# ===== DOCUMENTATION =====
+# Exclude auto-generated docs
+docs/_build/
+docs/api/
+*.epub
+*.mobi
+
+# ===== ASSETS (Optional - uncomment if needed) =====
+# If you want to exclude uploaded images or large files
+# assets/images/uploads/
+# assets/docs/*.pdf
+# assets/docs/*.docx
+# !assets/docs/README.md
+
+# ===== CONFIG FILES (optional) =====
+# Uncomment if you don't want to commit these
+# _config.yml
+# CNAME
+
+# ===== MISC =====
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+*.patch
+*.diff
+
+# ===== GITHUB PAGES SPECIFIC =====
+# Exclude Jekyll files if not using Jekyll
+_site/
+.sass-cache/
+.jekyll-metadata
+.jekyll-cache/
+Gemfile
+Gemfile.lock
+
+# ===== PROJECT SPECIFIC =====
+# Exclude large PDFs if they are stored in the repo
+assets/docs/past-papers/*.pdf
+assets/docs/study-guides/*.pdf
+!assets/docs/README.md
+
+# Exclude user-uploaded content if any
+assets/images/uploads/
+
+# ===== NOTE: =====
+# This .gitignore file ensures that sensitive files,
+# OS-generated files, and temporary files are not
+# accidentally committed to the repository.
+# 
+# Uncomment sections as needed for your setup.

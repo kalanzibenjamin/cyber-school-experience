@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resources - Cyber School Experience</title>
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    
+    <style>
+        /* ============================================================
+           RESOURCES PAGE STYLES
+           ============================================================ */
+        
+        /* ----- TOP BANNER ----- */
+        .top-banner {
+            background: var(--banner-bg);
+            color: var(--banner-text);
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.2px;
+            border-bottom: 2px solid var(--whatsapp);
+            position: relative;
+            z-index: 20;
+        }
+
+        .top-banner a {
+            color: var(--banner-link);
+            font-weight: 600;
+            margin: 0 4px;
+            border-bottom: 1px dotted rgba(139, 184, 255, 0.4);
+            transition: color var(--transition);
+        }
+
+        .top-banner a:hover {
+            color: var(--text-inverse);
+        }
+
+        /* ----- COSMIC BACKGROUND ----- */
+        .cosmic-bg {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .floating-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: var(--orb-opacity, 0.25);
+            animation: floatOrb 28s infinite alternate ease-in-out;
+        }
+
+        .orb-a {
+            width: 500px;
+            height: 500px;
+            top: -10%;
+            left: -8%;
+            background: radial-gradient(circle, #4a8cff, #a78bfa);
+            animation-duration: 32s;
+        }
+
+        .orb-b {
+            width: 400px;
+            height: 400px;
+            bottom: -6%;
+            right: -4%;
+            background: radial-gradient(circle, #f472b6, #fb923c);
+            animation-duration: 26s;
+            animation-delay: -6s;
+        }
+
+        .orb-c {
+            width: 300px;
+            height: 300px;
+            top: 40%;
+            left: 60%;
+            background: radial-gradient(circle, #34d399, #38bdf8);
+            animation-duration: 36s;
+            animation-delay: -12s;
+        }
+
+        @keyframes floatOrb {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(60px, -40px) scale(1.1); }
+        }
+
+        /* ----- PAGE HEADER ----- */
+        .page-header {
+            padding: 40px 40px 20px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .page-header-content {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .page-header-content h1 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .page-header-content h1 i {
+            color: var(--accent);
+            font-size: 2rem;
+        }
+
+        .page-header-content p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin-top: 8px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent-soft);
+            padding: 4px 16px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: var(--accent);
+            border: 1px solid var(--badge-border);
+            margin-bottom: 12px;
+        }
+
+        /* ----- STATS ROW ----- */
+        .stats-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            padding: 8px 40px 20px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .stats-row .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .stats-row .stat-item i {
+            font-size: 1.5rem;
+            color: var(--accent);
+            opacity: 0.6;
+        }
+
+        .stats-row .stat-item .stat-number {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+
+        .stats-row .stat-item .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* ----- MAIN ----- */
+        main {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 40px 60px;
+            position: relative;
+            z-index: 6;
+        }
+
+        /* ----- FILTER SECTION ----- */
+        .filter-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            align-items: center;
+            padding: 0 0 24px;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 200px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--surface-glass);
+            border: 1px solid var(--border-glass);
+            border-radius: 60px;
+            padding: 10px 20px;
+            transition: all var(--transition);
+        }
+
+        .search-box:focus-within {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(42, 125, 225, 0.15);
+        }
+
+        .search-box i {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            background: transparent;
+            outline: none;
+            font-size: 0.95rem;
+            font-family: inherit;
+            color: var(--text-primary);
+        }
+
+        .search-box input::placeholder {
+            color: var(--text-light);
+        }
+
+        .filter-btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .filter-btns button {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 18px;
+            border: 1px solid var(--border-glass);
+            border-radius: 40px;
+            background: var(--surface-glass);
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all var(--transition);
+            font-family: inherit;
+        }
+
+        .filter-btns button:hover {
+            background: var(--accent-soft);
+            color: var(--accent);
+        }
+
+        .filter-btns button.active {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+            box-shadow: 0 4px 12px -4px rgba(42, 125, 225, 0.30);
+        }
+
+        .filter-btns button i {
+            font-size: 0.8rem;
+        }
+
+        /* ----- RESOURCES GRID ----- */
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+            padding: 12px 0 24px;
+        }
+
+        .resource-card {
+            background: var(--surface-glass);
+            border-radius: var(--radius);
+            border: 1px solid var(--border-glass);
+            padding: 24px 22px;
+            transition: all var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .resource-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--accent);
+            opacity: 0;
+            transition: opacity var(--transition);
+        }
+
+        .resource-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+            background: var(--surface-glass-hover);
+        }
+
+        .resource-card:hover::before {
+            opacity: 1;
+        }
+
+        .resource-card .card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+        }
+
+        .resource-card .card-icon.notes {
+            background: rgba(59, 130, 246, 0.12);
+            color: #2563eb;
+        }
+
+        .resource-card .card-icon.video {
+            background: rgba(239, 68, 68, 0.12);
+            color: #dc2626;
+        }
+
+        .resource-card .card-icon.pastpaper {
+            background: rgba(245, 158, 11, 0.12);
+            color: #d97706;
+        }
+
+        .resource-card .card-icon.link {
+            background: rgba(139, 92, 246, 0.12);
+            color: #7c3aed;
+        }
+
+        .resource-card .card-icon.quiz {
+            background: rgba(16, 185, 129, 0.12);
+            color: #059669;
+        }
+
+        .resource-card .card-type {
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-light);
+            margin-bottom: 4px;
+        }
+
+        .resource-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .resource-card .card-description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .resource-card .card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .resource-card .card-footer .card-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .resource-card .card-footer .card-meta i {
+            margin-right: 4px;
+        }
+
+        .resource-card .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 16px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: #fff;
+            background: var(--accent);
+            border: none;
+            cursor: pointer;
+            transition: all var(--transition);
+            text-decoration: none;
+        }
+
+        .resource-card .btn-download:hover {
+            background: var(--accent-hover);
+            transform: scale(1.04);
+        }
+
+        .resource-card .btn-download i {
+            font-size: 0.8rem;
+        }
+
+        /* ----- CATEGORY SECTION ----- */
+        .category-section {
+            margin: 40px 0 20px;
+        }
+
+        .category-section .category-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .category-section .category-header h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .category-section .category-header h2 i {
+            color: var(--accent);
+        }
+
+        .category-section .category-header .view-all {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all var(--transition);
+        }
+
+        .category-section .category-header .view-all:hover {
+            color: var(--accent-hover);
+        }
+
+        .category-section .category-header .view-all i {
+            transition: transform var(--transition);
+        }
+
+        .category-section .category-header .view-all:hover i {
+            transform: translateX(4px);
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .category-grid .resource-card {
+            padding: 20px;
+        }
+
+        /* ----- REQUEST SECTION ----- */
+        .request-section {
+            text-align: center;
+            padding: 48px 32px;
+            margin-top: 40px;
+            background: var(--surface-glass);
+            border-radius: var(--radius);
+            border: 1px solid var(--border-glass);
+            backdrop-filter: blur(12px) saturate(140%);
+            -webkit-backdrop-filter: blur(12px) saturate(140%);
+        }
+
+        .request-section .request-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: var(--accent-soft);
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 16px;
+        }
+
+        .request-section h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .request-section p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            max-width: 500px;
+            margin: 0 auto 20px;
+        }
+
+        .request-section .request-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 32px;
+            border: none;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #fff;
+            background: var(--accent);
+            cursor: pointer;
+            transition: all var(--transition);
+            box-shadow: 0 4px 12px -4px rgba(42, 125, 225, 0.30);
+            font-family: inherit;
+        }
+
+        .request-section .request-btn:hover {
+            background: var(--accent-hover);
+            transform: scale(1.02);
+        }
+
+        /* ----- EMPTY STATE ----- */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-light);
+            grid-column: 1 / -1;
+        }
+
+        .empty-state i {
+            font-size: 3rem;
+            color: var(--text-light);
+            opacity: 0.3;
+            margin-bottom: 16px;
+        }
+
+        .empty-state h3 {
+            font-size: 1.3rem;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .page-header {
+                padding: 30px 24px 16px;
+            }
+
+            .page-header-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .stats-row {
+                padding: 4px 24px 16px;
+            }
+
+            main {
+                padding: 0 24px 40px;
+            }
+
+            .resources-grid {
+                grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-header {
+                padding: 20px 16px 12px;
+            }
+
+            .page-header-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .page-header-content p {
+                font-size: 0.95rem;
+            }
+
+            .stats-row {
+                gap: 16px;
+                padding: 0 16px 12px;
+            }
+
+            .stats-row .stat-item .stat-number {
+                font-size: 1.2rem;
+            }
+
+            .stats-row .stat-item .stat-label {
+                font-size: 0.75rem;
+            }
+
+            main {
+                padding: 0 16px 32px;
+            }
+
+            .filter-section {
+                flex-direction: column;
+                padding: 0 0 16px;
+            }
+
+            .search-box {
+                width: 100%;
+            }
+
+            .filter-btns {
+                width: 100%;
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                padding-bottom: 4px;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .filter-btns button {
+                flex-shrink: 0;
+                font-size: 0.8rem;
+                padding: 6px 14px;
+            }
+
+            .resources-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+                padding: 8px 0 16px;
+            }
+
+            .category-grid {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            .category-section .category-header h2 {
+                font-size: 1.2rem;
+            }
+
+            .request-section {
+                padding: 32px 20px;
+            }
+
+            .request-section h2 {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-header-content h1 {
+                font-size: 1.4rem;
+            }
+
+            .resource-card {
+                padding: 16px;
+            }
+
+            .resource-card .card-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+
+            .resource-card h3 {
+                font-size: 0.95rem;
+            }
+
+            .top-banner {
+                font-size: 0.8rem;
+                padding: 8px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== ANIMATED COSMIC BACKGROUND ===== -->
+    <div class="cosmic-bg">
+        <div class="floating-orb orb-a"></div>
+        <div class="floating-orb orb-b"></div>
+        <div class="floating-orb orb-c"></div>
+    </div>
+
+    <!-- ===== TOP BANNER ===== -->
+    <div class="top-banner">
+        <i class="fas fa-bullhorn"></i>
+        Welcome to Cyber School Experience Community —
+        <a href="../chats/">Join your class WhatsApp group</a>
+        <i class="fas fa-arrow-right" style="margin-left: 6px;"></i>
+    </div>
+
+    <!-- ===== HEADER ===== -->
+    <div data-include="../../components/header.html"></div>
+
+    <!-- ===== PAGE HEADER ===== -->
+    <section class="page-header">
+        <div class="page-header-content">
+            <span class="badge"><i class="fas fa-book-open"></i> Learning Materials</span>
+            <h1><i class="fas fa-book-open"></i> Resources</h1>
+            <p>Access study materials, lecture notes, past papers, and more to support your learning journey</p>
+        </div>
+    </section>
+
+    <!-- ===== MAIN ===== -->
+    <main>
+
+        <!-- ===== STATS ===== -->
+        <div class="stats-row" id="statsRow">
+            <!-- Stats loaded by JS -->
+        </div>
+
+        <!-- ===== FILTER / SEARCH ===== -->
+        <div class="filter-section">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search resources..." aria-label="Search resources" />
+            </div>
+            <div class="filter-btns">
+                <button class="active" data-filter="all"><i class="fas fa-list"></i> All</button>
+                <button data-filter="notes"><i class="fas fa-file-pdf"></i> Notes</button>
+                <button data-filter="video"><i class="fas fa-video"></i> Videos</button>
+                <button data-filter="pastpaper"><i class="fas fa-pencil-alt"></i> Past Papers</button>
+                <button data-filter="link"><i class="fas fa-link"></i> Links</button>
+                <button data-filter="quiz"><i class="fas fa-question-circle"></i> Quizzes</button>
+            </div>
+        </div>
+
+        <!-- ===== RESOURCES GRID ===== -->
+        <div class="resources-grid" id="resourcesGrid">
+            <!-- Cards will be rendered by JS -->
+        </div>
+
+        <!-- ===== CATEGORY: LECTURE NOTES ===== -->
+        <div class="category-section" id="notes-section">
+            <div class="category-header">
+                <h2><i class="fas fa-file-pdf"></i> Lecture Notes</h2>
+                <a href="#" class="view-all" data-category="notes">View All <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="category-grid" id="notesGrid">
+                <!-- Rendered by JS -->
+            </div>
+        </div>
+
+        <!-- ===== CATEGORY: VIDEO LECTURES ===== -->
+        <div class="category-section" id="video-section">
+            <div class="category-header">
+                <h2><i class="fas fa-video"></i> Video Lectures</h2>
+                <a href="#" class="view-all" data-category="video">View All <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="category-grid" id="videoGrid">
+                <!-- Rendered by JS -->
+            </div>
+        </div>
+
+        <!-- ===== CATEGORY: PAST PAPERS ===== -->
+        <div class="category-section" id="pastpaper-section">
+            <div class="category-header">
+                <h2><i class="fas fa-pencil-alt"></i> Past Papers</h2>
+                <a href="#" class="view-all" data-category="pastpaper">View All <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="category-grid" id="pastpaperGrid">
+                <!-- Rendered by JS -->
+            </div>
+        </div>
+
+        <!-- ===== REQUEST SECTION ===== -->
+        <div class="request-section">
+            <div class="request-icon"><i class="fas fa-plus-circle"></i></div>
+            <h2>Need a Specific Resource?</h2>
+            <p>Can't find what you're looking for? Let us know what you need and we'll help you get it.</p>
+            <button class="request-btn" id="requestBtn">
+                <i class="fas fa-paper-plane"></i> Request Resource
+            </button>
+        </div>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <div data-include="../../components/footer.html"></div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="../../assets/js/include.js"></script>
+    <script src="../../assets/js/main.js"></script>
+
+    <script>
+        (function() {
+            'use strict';
+
+            // ===== RESOURCES DATA =====
+            const RESOURCES_DATA = {
+                "resources": [
+                    {
+                        "id": 1,
+                        "title": "Fundamentals of Nursing - Lecture 1",
+                        "description": "Introduction to nursing fundamentals, patient care, and basic nursing procedures.",
+                        "type": "notes",
+                        "category": "Lecture Notes",
+                        "fileSize": "2.4 MB",
+                        "fileType": "PDF",
+                        "downloadUrl": "#",
+                        "icon": "fa-file-pdf",
+                        "date": "June 2026"
+                    },
+                    {
+                        "id": 2,
+                        "title": "Midwifery: Antenatal Care Guide",
+                        "description": "Comprehensive guide covering antenatal care, assessment, and monitoring for CM students.",
+                        "type": "notes",
+                        "category": "Lecture Notes",
+                        "fileSize": "3.1 MB",
+                        "fileType": "PDF",
+                        "downloadUrl": "#",
+                        "icon": "fa-file-pdf",
+                        "date": "July 2026"
+                    },
+                    {
+                        "id": 3,
+                        "title": "Introduction to Pharmacology",
+                        "description": "Video lecture on basic pharmacology principles, drug classifications, and administration.",
+                        "type": "video",
+                        "category": "Video Lectures",
+                        "fileSize": "45 min",
+                        "fileType": "Video",
+                        "downloadUrl": "#",
+                        "icon": "fa-video",
+                        "date": "June 2026"
+                    },
+                    {
+                        "id": 4,
+                        "title": "CN 1.2 Past Paper - 2025",
+                        "description": "Complete past examination paper for CN 1.2 with marking scheme included.",
+                        "type": "pastpaper",
+                        "category": "Past Papers",
+                        "fileSize": "1.8 MB",
+                        "fileType": "PDF",
+                        "downloadUrl": "#",
+                        "icon": "fa-pencil-alt",
+                        "date": "2025"
+                    },
+                    {
+                        "id": 5,
+                        "title": "CM 2.2 Past Paper - 2025",
+                        "description": "Past examination paper for CM 2.2 with detailed solutions and references.",
+                        "type": "pastpaper",
+                        "category": "Past Papers",
+                        "fileSize": "2.2 MB",
+                        "fileType": "PDF",
+                        "downloadUrl": "#",
+                        "icon": "fa-pencil-alt",
+                        "date": "2025"
+                    },
+                    {
+                        "id": 6,
+                        "title": "NCLEX-RN Study Resources",
+                        "description": "Curated list of useful links for NCLEX-RN exam preparation and practice.",
+                        "type": "link",
+                        "category": "Links",
+                        "fileSize": "—",
+                        "fileType": "Link",
+                        "downloadUrl": "#",
+                        "icon": "fa-link",
+                        "date": "2026"
+                    },
+                    {
+                        "id": 7,
+                        "title": "Nursing Practice Quiz - Module 1",
+                        "description": "Interactive quiz covering Module 1: Fundamentals of Nursing Practice.",
+                        "type": "quiz",
+                        "category": "Quizzes",
+                        "fileSize": "20 questions",
+                        "fileType": "Quiz",
+                        "downloadUrl": "#",
+                        "icon": "fa-question-circle",
+                        "date": "July 2026"
+                    },
+                    {
+                        "id": 8,
+                        "title": "Clinical Skills: Patient Assessment",
+                        "description": "Video demonstration of complete patient assessment techniques for nursing students.",
+                        "type": "video",
+                        "category": "Video Lectures",
+                        "fileSize": "32 min",
+                        "fileType": "Video",
+                        "downloadUrl": "#",
+                        "icon": "fa-video",
+                        "date": "June 2026"
+                    },
+                    {
+                        "id": 9,
+                        "title": "Maternal and Child Health Notes",
+                        "description": "Lecture notes on maternal health, child development, and pediatric nursing care.",
+                        "type": "notes",
+                        "category": "Lecture Notes",
+                        "fileSize": "4.5 MB",
+                        "fileType": "PDF",
+                        "downloadUrl": "#",
+                        "icon": "fa-file-pdf",
+                        "date": "July 2026"
+                    }
+                ]
+            };
+
+            // ===== RESOURCES MANAGER =====
+            class ResourcesManager {
+                constructor(data) {
+                    this.allItems = data.resources || [];
+                    this.filteredItems = [...this.allItems];
+                    this.currentFilter = 'all';
+                    this.searchQuery = '';
+                }
+
+                getItems() {
+                    return this.filteredItems;
+                }
+
+                getStats() {
+                    const total = this.allItems.length;
+                    const notes = this.allItems.filter(r => r.type === 'notes').length;
+                    const video = this.allItems.filter(r => r.type === 'video').length;
+                    const pastpaper = this.allItems.filter(r => r.type === 'pastpaper').length;
+                    return { total, notes, video, pastpaper };
+                }
+
+                getByCategory(category) {
+                    return this.allItems.filter(item => item.type === category);
+                }
+
+                filter(category, search = '') {
+                    this.currentFilter = category;
+                    this.searchQuery = search.toLowerCase().trim();
+
+                    let items = [...this.allItems];
+
+                    if (category !== 'all') {
+                        items = items.filter(item => item.type === category);
+                    }
+
+                    if (this.searchQuery) {
+                        items = items.filter(item => 
+                            item.title.toLowerCase().includes(this.searchQuery) ||
+                            item.description.toLowerCase().includes(this.searchQuery) ||
+                            item.category.toLowerCase().includes(this.searchQuery)
+                        );
+                    }
+
+                    this.filteredItems = items;
+                    return this.filteredItems;
+                }
+            }
+
+            // ===== RENDERER =====
+            class ResourcesRenderer {
+                constructor(containerId) {
+                    this.container = document.getElementById(containerId);
+                    this.manager = null;
+                }
+
+                setManager(manager) {
+                    this.manager = manager;
+                }
+
+                render() {
+                    if (!this.manager || !this.container) return;
+
+                    const items = this.manager.getItems();
+
+                    if (items.length === 0) {
+                        this.container.innerHTML = `
+                            <div class="empty-state">
+                                <i class="fas fa-search"></i>
+                                <h3>No resources found</h3>
+                                <p>Try adjusting your search or filter criteria</p>
+                            </div>
+                        `;
+                        return;
+                    }
+
+                    const iconMap = {
+                        'notes': 'fa-file-pdf',
+                        'video': 'fa-video',
+                        'pastpaper': 'fa-pencil-alt',
+                        'link': 'fa-link',
+                        'quiz': 'fa-question-circle'
+                    };
+
+                    const labelMap = {
+                        'notes': 'Notes',
+                        'video': 'Video',
+                        'pastpaper': 'Past Paper',
+                        'link': 'Link',
+                        'quiz': 'Quiz'
+                    };
+
+                    this.container.innerHTML = items.map(item => {
+                        const icon = iconMap[item.type] || 'fa-file';
+                        const label = labelMap[item.type] || 'Resource';
+
+                        return `
+                            <div class="resource-card" data-id="${item.id}">
+                                <div class="card-icon ${item.type}">
+                                    <i class="fas ${icon}"></i>
+                                </div>
+                                <div class="card-type">${label}</div>
+                                <h3>${item.title}</h3>
+                                <p class="card-description">${item.description}</p>
+                                <div class="card-footer">
+                                    <div class="card-meta">
+                                        <span><i class="fas fa-calendar-alt"></i> ${item.date}</span>
+                                        <span><i class="fas fa-file"></i> ${item.fileSize}</span>
+                                    </div>
+                                    <a href="${item.downloadUrl}" class="btn-download">
+                                        <i class="fas fa-download"></i> Download
+                                    </a>
+                                </div>
+                            </div>
+                        `;
+                    }).join('');
+                }
+
+                renderCategory(containerId, category, limit = 3) {
+                    const container = document.getElementById(containerId);
+                    if (!container || !this.manager) return;
+
+                    const items = this.manager.getByCategory(category).slice(0, limit);
+
+                    if (items.length === 0) {
+                        container.innerHTML = `
+                            <div class="empty-state" style="padding:20px;">
+                                <p style="font-size:0.9rem;">No resources in this category yet.</p>
+                            </div>
+                        `;
+                        return;
+                    }
+
+                    const iconMap = {
+                        'notes': 'fa-file-pdf',
+                        'video': 'fa-video',
+                        'pastpaper': 'fa-pencil-alt',
+                        'link': 'fa-link',
+                        'quiz': 'fa-question-circle'
+                    };
+
+                    const labelMap = {
+                        'notes': 'Notes',
+                        'video': 'Video',
+                        'pastpaper': 'Past Paper',
+                        'link': 'Link',
+                        'quiz': 'Quiz'
+                    };
+
+                    container.innerHTML = items.map(item => {
+                        const icon = iconMap[item.type] || 'fa-file';
+                        const label = labelMap[item.type] || 'Resource';
+
+                        return `
+                            <div class="resource-card" data-id="${item.id}">
+                                <div class="card-icon ${item.type}">
+                                    <i class="fas ${icon}"></i>
+                                </div>
+                                <div class="card-type">${label}</div>
+                                <h3>${item.title}</h3>
+                                <p class="card-description">${item.description}</p>
+                                <div class="card-footer">
+                                    <div class="card-meta">
+                                        <span><i class="fas fa-calendar-alt"></i> ${item.date}</span>
+                                        <span><i class="fas fa-file"></i> ${item.fileSize}</span>
+                                    </div>
+                                    <a href="${item.downloadUrl}" class="btn-download">
+                                        <i class="fas fa-download"></i> Download
+                                    </a>
+                                </div>
+                            </div>
+                        `;
+                    }).join('');
+                }
+            }
+
+            // ===== STATS RENDERER =====
+            function renderStats(manager) {
+                const container = document.getElementById('statsRow');
+                if (!container) return;
+
+                const stats = manager.getStats();
+
+                container.innerHTML = `
+                    <div class="stat-item">
+                        <i class="fas fa-book"></i>
+                        <div>
+                            <div class="stat-number">${stats.total}</div>
+                            <div class="stat-label">Total Resources</div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <div>
+                            <div class="stat-number">${stats.notes}</div>
+                            <div class="stat-label">Lecture Notes</div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-video"></i>
+                        <div>
+                            <div class="stat-number">${stats.video}</div>
+                            <div class="stat-label">Video Lectures</div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-pencil-alt"></i>
+                        <div>
+                            <div class="stat-number">${stats.pastpaper}</div>
+                            <div class="stat-label">Past Papers</div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            // ===== INITIALIZE =====
+            function initResourcesPage() {
+                const manager = new ResourcesManager(RESOURCES_DATA);
+                manager.filter('all');
+
+                renderStats(manager);
+
+                const renderer = new ResourcesRenderer('resourcesGrid');
+                renderer.setManager(manager);
+                renderer.render();
+
+                // Render categories
+                renderer.renderCategory('notesGrid', 'notes', 3);
+                renderer.renderCategory('videoGrid', 'video', 3);
+                renderer.renderCategory('pastpaperGrid', 'pastpaper', 3);
+
+                // ===== SEARCH =====
+                const searchInput = document.getElementById('searchInput');
+                if (searchInput) {
+                    let searchTimer;
+                    searchInput.addEventListener('input', function() {
+                        clearTimeout(searchTimer);
+                        searchTimer = setTimeout(() => {
+                            const query = this.value.trim();
+                            manager.filter(manager.currentFilter, query);
+                            renderer.render();
+                        }, 300);
+                    });
+                }
+
+                // ===== FILTERS =====
+                const filterBtns = document.querySelectorAll('.filter-btns button');
+                filterBtns.forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        filterBtns.forEach(b => b.classList.remove('active'));
+                        this.classList.add('active');
+                        const filter = this.dataset.filter;
+                        const search = searchInput ? searchInput.value.trim() : '';
+                        manager.filter(filter, search);
+                        renderer.render();
+                    });
+                });
+
+                // ===== VIEW ALL =====
+                document.querySelectorAll('.view-all').forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const category = this.dataset.category;
+                        
+                        // Update filter
+                        filterBtns.forEach(b => b.classList.remove('active'));
+                        const targetBtn = document.querySelector(`.filter-btns button[data-filter="${category}"]`);
+                        if (targetBtn) {
+                            targetBtn.classList.add('active');
+                            const search = searchInput ? searchInput.value.trim() : '';
+                            manager.filter(category, search);
+                            renderer.render();
+                            // Scroll to grid
+                            document.getElementById('resourcesGrid').scrollIntoView({ 
+                                behavior: 'smooth', 
+                                block: 'start' 
+                            });
+                        }
+                    });
+                });
+
+                // ===== REQUEST BUTTON =====
+                const requestBtn = document.getElementById('requestBtn');
+                if (requestBtn) {
+                    requestBtn.addEventListener('click', function() {
+                        const message = encodeURIComponent(
+                            `📚 *Resource Request*\n\nI would like to request the following resource:\n\n` +
+                            `Resource Type: [Please specify]\n` +
+                            `Topic/Subject: [Please specify]\n` +
+                            `Additional Details: [Please provide any extra information]\n\n` +
+                            `— From Cyber School Experience Resources Page`
+                        );
+                        const whatsappUrl = `https://wa.me/2348012345678?text=${message}`;
+                        window.open(whatsappUrl, '_blank');
+                    });
+                }
+
+                console.log('📚 Resources page initialized with', manager.allItems.length, 'resources');
+            }
+
+            // ===== INIT =====
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initResourcesPage);
+            } else {
+                initResourcesPage();
+            }
+
+        })();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+{
+  "announcements": [
+    {
+      "id": 1,
+      "title": "Final Exam Registration Deadline Approaching",
+      "excerpt": "Registration for the final semester exams closes on July 20, 2026. All students must complete registration by this date.",
+      "fullContent": "<p>This is a reminder that the registration deadline for the final semester examinations is fast approaching. All students are required to complete their registration by <strong>July 20, 2026</strong>.</p><p><strong>Important Details:</strong></p><ul><li>Registration closes at 11:59 PM on July 20, 2026</li><li>Late registration will incur a penalty fee</li><li>Ensure you have paid all outstanding fees</li><li>Contact the admin for any registration issues</li></ul><p>Don't wait until the last minute. Complete your registration today!</p>",
+      "date": "July 8, 2026",
+      "author": "Admin",
+      "authorRole": "Administrator",
+      "authorInitial": "A",
+      "tags": ["urgent", "important"],
+      "category": "urgent",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "Weekly Study Group: Mathematics Session",
+      "excerpt": "Join our weekly Mathematics study group every Saturday at 3 PM. All students are welcome!",
+      "fullContent": "<p>The Mathematics study group is now meeting every <strong>Saturday at 3 PM</strong>. This is a great opportunity to work through challenging problems with peers and tutors.</p><p><strong>Session Details:</strong></p><ul><li><strong>Day:</strong> Every Saturday</li><li><strong>Time:</strong> 3:00 PM - 5:00 PM</li><li><strong>Platform:</strong> WhatsApp group + Video call</li><li><strong>Topics:</strong> Calculus, Algebra, Statistics</li></ul><p>Bring your questions and be ready to learn!</p>",
+      "date": "July 6, 2026",
+      "author": "Math Tutor",
+      "authorRole": "Head Tutor",
+      "authorInitial": "M",
+      "tags": ["event", "new"],
+      "category": "event",
+      "featured": false
+    },
+    {
+      "id": 3,
+      "title": "New Study Materials Uploaded for CN/CM",
+      "excerpt": "Fresh lecture notes and practice questions for Computer Networking and Communication have been uploaded to the resource library.",
+      "fullContent": "<p>We're excited to announce that new study materials for <strong>Computer Networking and Communication (CN/CM)</strong> are now available.</p><p><strong>What's New:</strong></p><ul><li>Lecture notes for Weeks 8-12</li><li>Practice questions with solutions</li><li>Past exam papers (2018-2025)</li><li>Summary guides for quick revision</li></ul><p>Access these materials through the Resources page or directly from your class WhatsApp group.</p>",
+      "date": "July 5, 2026",
+      "author": "Resource Team",
+      "authorRole": "Content Curators",
+      "authorInitial": "R",
+      "tags": ["update", "new"],
+      "category": "update",
+      "featured": false
+    },
+    {
+      "id": 4,
+      "title": "Important: Semester Break Schedule",
+      "excerpt": "The semester break will run from August 1-15, 2026. Plan your studies accordingly.",
+      "fullContent": "<p>This is to inform all students that the semester break will run from <strong>August 1 to August 15, 2026</strong>.</p><p><strong>Key Dates:</strong></p><ul><li><strong>Break Start:</strong> August 1, 2026</li><li><strong>Break End:</strong> August 15, 2026</li><li><strong>Classes Resume:</strong> August 16, 2026</li><li><strong>Exams Start:</strong> August 20, 2026</li></ul><p>Use this time to revise and prepare for your upcoming exams. Study groups will continue to operate during the break.</p>",
+      "date": "July 3, 2026",
+      "author": "Admin",
+      "authorRole": "Administrator",
+      "authorInitial": "A",
+      "tags": ["important"],
+      "category": "important",
+      "featured": false
+    },
+    {
+      "id": 5,
+      "title": "Welcome New Students! Orientation Week Details",
+      "excerpt": "Orientation week for new students starts July 25. Join our welcome sessions and meet your peers.",
+      "fullContent": "<p>We are thrilled to welcome all new students to the Cyber School Experience community! Orientation week runs from <strong>July 25-31, 2026</strong>.</p><p><strong>Orientation Schedule:</strong></p><ul><li><strong>Day 1:</strong> Welcome session & community introduction</li><li><strong>Day 2:</strong> Platform walkthrough & group assignments</li><li><strong>Day 3:</strong> Meet your tutors & academic advisors</li><li><strong>Day 4:</strong> Study skills workshop</li><li><strong>Day 5:</strong> Peer networking & social session</li></ul><p>Check your class WhatsApp group for daily session links and updates.</p>",
+      "date": "July 1, 2026",
+      "author": "Community Team",
+      "authorRole": "Student Affairs",
+      "authorInitial": "C",
+      "tags": ["event", "new", "important"],
+      "category": "event",
+      "featured": false
+    },
+    {
+      "id": 6,
+      "title": "System Maintenance: Platform Downtime",
+      "excerpt": "The Cyber School Experience platform will be down for maintenance on July 28 from 2 AM to 6 AM.",
+      "fullContent": "<p>We will be performing scheduled maintenance on our platform on <strong>July 28, 2026 from 2:00 AM to 6:00 AM (GMT)</strong>.</p><p><strong>What to Expect:</strong></p><ul><li>Platform will be inaccessible during this period</li><li>All resources will remain intact</li><li>WhatsApp groups will remain active</li><li>No action required from students</li></ul><p>We apologize for any inconvenience. Thank you for your understanding.</p>",
+      "date": "June 28, 2026",
+      "author": "IT Team",
+      "authorRole": "Technical Support",
+      "authorInitial": "I",
+      "tags": ["update", "important"],
+      "category": "update",
+      "featured": false
+    },
+    {
+      "id": 7,
+      "title": "Final Exam Timetable Released",
+      "excerpt": "The official timetable for the final semester exams is now available. Check your schedule and prepare!",
+      "fullContent": "<p>The final examination timetable for the semester is now available for download. <strong>Check your schedule carefully</strong> and note all your exam dates.</p><p><strong>Important Notes:</strong></p><ul><li>Exams run from August 20 - September 5, 2026</li><li>Each exam is 2 hours long</li><li>Morning sessions: 8:00 AM - 10:00 AM</li><li>Afternoon sessions: 1:00 PM - 3:00 PM</li><li>Evening sessions: 4:00 PM - 6:00 PM</li></ul><p>Click the link below to download the full timetable.</p>",
+      "date": "June 25, 2026",
+      "author": "Admin",
+      "authorRole": "Examinations Officer",
+      "authorInitial": "A",
+      "tags": ["urgent", "important"],
+      "category": "urgent",
+      "featured": true
+    },
+    {
+      "id": 8,
+      "title": "Tutor Recruitment Drive 2026",
+      "excerpt": "We are recruiting new tutors for the upcoming semester. Apply now and join our teaching team!",
+      "fullContent": "<p>Cyber School Experience is looking for passionate and knowledgeable tutors to join our team for the upcoming semester.</p><p><strong>Requirements:</strong></p><ul><li>Strong academic record in your field</li><li>Excellent communication skills</li><li>Ability to explain complex concepts clearly</li><li>Commitment of 3-5 hours per week</li></ul><p><strong>Benefits:</strong></p><ul><li>Leadership and teaching experience</li><li>Certificate of recognition</li><li>Letter of recommendation</li><li>Network with faculty and professionals</li></ul><p>Interested? Contact the admin for the application form.</p>",
+      "date": "June 20, 2026",
+      "author": "Admin",
+      "authorRole": "Human Resources",
+      "authorInitial": "A",
+      "tags": ["update", "new"],
+      "category": "update",
+      "featured": false
+    }
+  ]
+}

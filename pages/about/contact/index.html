@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Cyber School Experience</title>
+    <meta http-equiv="refresh" content="0; url=/pages/about/index.html#contact" />
+    <script>window.location.replace('/pages/about/index.html#contact');</script>
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    
+    <style>
+        /* ============================================================
+           CONTACT PAGE STYLES
+           ============================================================ */
+        
+        /* ----- TOP BANNER ----- */
+        .top-banner {
+            background: var(--banner-bg);
+            color: var(--banner-text);
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.2px;
+            border-bottom: 2px solid var(--whatsapp);
+            position: relative;
+            z-index: 20;
+        }
+
+        .top-banner a {
+            color: var(--banner-link);
+            font-weight: 600;
+            margin: 0 4px;
+            border-bottom: 1px dotted rgba(139, 184, 255, 0.4);
+            transition: color var(--transition);
+        }
+
+        .top-banner a:hover {
+            color: var(--text-inverse);
+        }
+
+        /* ----- PAGE SHELL ----- */
+        .page-shell {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 40px 40px 60px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .page-grid {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        /* ----- SIDEBAR ----- */
+        .sidebar {
+            position: sticky;
+            top: 100px;
+        }
+
+        .sidebar-card {
+            background: var(--surface-glass);
+            border-radius: var(--radius);
+            border: 1px solid var(--border-glass);
+            padding: 28px 24px;
+            backdrop-filter: blur(12px) saturate(140%);
+            -webkit-backdrop-filter: blur(12px) saturate(140%);
+            box-shadow: 0 20px 45px -28px rgba(15, 23, 42, 0.35);
+        }
+
+        .sidebar-card .sidebar-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), #4f8ff7);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin: 0 auto 16px;
+            box-shadow: 0 12px 30px -16px rgba(42, 125, 225, 0.45);
+        }
+
+        .sidebar-card h3 {
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .sidebar-card .sidebar-role {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 16px;
+        }
+
+        .sidebar-card .sidebar-bio {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .sidebar-card .sidebar-divider {
+            height: 1px;
+            background: var(--border-glass);
+            margin: 16px 0;
+        }
+
+        .sidebar-card .sidebar-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .sidebar-card .sidebar-links a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all var(--transition);
+        }
+
+        .sidebar-card .sidebar-links a:hover {
+            background: var(--accent-soft);
+            color: var(--accent);
+            transform: translateX(2px);
+        }
+
+        .sidebar-card .sidebar-links a:hover i {
+            color: var(--accent);
+        }
+
+        .sidebar-card .sidebar-links a.active {
+            background: var(--accent-soft);
+            color: var(--accent);
+            box-shadow: inset 0 0 0 1px rgba(42, 125, 225, 0.16);
+        }
+
+        .sidebar-card .sidebar-links a.active i {
+            color: var(--accent);
+        }
+
+        .sidebar-card .sidebar-links a i {
+            width: 20px;
+            color: var(--text-light);
+            transition: color var(--transition);
+        }
+
+        /* ----- CONTENT CARD ----- */
+        .content-card {
+            background: var(--surface-glass);
+            border-radius: var(--radius);
+            border: 1px solid var(--border-glass);
+            padding: 40px 44px;
+            backdrop-filter: blur(12px) saturate(140%);
+            -webkit-backdrop-filter: blur(12px) saturate(140%);
+        }
+
+        .content-card .page-header-simple {
+            margin-bottom: 28px;
+        }
+
+        .content-card .page-header-simple .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent-soft);
+            padding: 4px 16px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: var(--accent);
+            border: 1px solid var(--badge-border);
+            margin-bottom: 12px;
+        }
+
+        .content-card h1 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+
+        .content-card h1 i {
+            color: var(--whatsapp);
+            margin-right: 10px;
+        }
+
+        .content-card .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .content-card p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        /* ===== CONTACT GRID ===== */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin: 20px 0 8px;
+        }
+
+        /* ----- CONTACT FORM ----- */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .contact-form .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .contact-form .form-group label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .contact-form .form-group label .required {
+            color: #e11d48;
+            margin-left: 2px;
+        }
+
+        .contact-form .form-group input,
+        .contact-form .form-group select,
+        .contact-form .form-group textarea {
+            padding: 10px 16px;
+            border: 1px solid var(--border-glass);
+            border-radius: 12px;
+            background: var(--surface);
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: all var(--transition);
+            outline: none;
+        }
+
+        .contact-form .form-group input:focus,
+        .contact-form .form-group select:focus,
+        .contact-form .form-group textarea:focus {
+            border-color: var(--whatsapp);
+            box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.12);
+        }
+
+        .contact-form .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-form .form-group input::placeholder,
+        .contact-form .form-group textarea::placeholder {
+            color: var(--text-light);
+        }
+
+        .contact-form .form-group select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2364748b' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            padding-right: 40px;
+        }
+
+        .contact-form .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .contact-form .btn-submit {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 32px;
+            border: none;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #fff;
+            background: var(--whatsapp);
+            cursor: pointer;
+            transition: all var(--transition);
+            box-shadow: 0 4px 12px -4px rgba(37, 211, 102, 0.30);
+            font-family: inherit;
+            margin-top: 4px;
+        }
+
+        .contact-form .btn-submit:hover {
+            background: var(--whatsapp-hover);
+            transform: scale(1.02);
+        }
+
+        .contact-form .btn-submit:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .contact-form .btn-submit i {
+            font-size: 0.9rem;
+        }
+
+        /* ----- CONTACT INFO ----- */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .contact-info .info-card {
+            background: var(--surface);
+            border-radius: 12px;
+            border: 1px solid var(--border-glass);
+            padding: 18px 22px;
+            transition: all var(--transition);
+        }
+
+        .contact-info .info-card:hover {
+            background: var(--surface-glass-hover);
+            transform: translateX(4px);
+        }
+
+        .contact-info .info-card .info-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 4px;
+        }
+
+        .contact-info .info-card .info-header i {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .contact-info .info-card .info-header i.whatsapp-icon {
+            background: rgba(37, 211, 102, 0.15);
+            color: var(--whatsapp);
+        }
+
+        .contact-info .info-card .info-header i.email-icon {
+            background: rgba(42, 125, 225, 0.15);
+            color: var(--accent);
+        }
+
+        .contact-info .info-card .info-header i.clock-icon {
+            background: rgba(245, 158, 11, 0.15);
+            color: #d97706;
+        }
+
+        .contact-info .info-card .info-header i.reply-icon {
+            background: rgba(139, 92, 246, 0.15);
+            color: #7c3aed;
+        }
+
+        .contact-info .info-card .info-header h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .contact-info .info-card p {
+            margin: 0 0 0 48px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .contact-info .info-card a {
+            color: var(--whatsapp);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-info .info-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== WHATSAPP DIRECT BUTTON ===== */
+        .whatsapp-direct {
+            background: rgba(37, 211, 102, 0.08);
+            border: 2px solid var(--whatsapp);
+            border-radius: 12px;
+            padding: 20px 24px;
+            text-align: center;
+            margin-top: 4px;
+        }
+
+        .whatsapp-direct .btn-whatsapp-direct {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 32px;
+            border: none;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 1rem;
+            color: #fff;
+            background: var(--whatsapp);
+            cursor: pointer;
+            transition: all var(--transition);
+            box-shadow: 0 4px 12px -4px rgba(37, 211, 102, 0.30);
+            font-family: inherit;
+            margin-top: 8px;
+            text-decoration: none;
+        }
+
+        .whatsapp-direct .btn-whatsapp-direct:hover {
+            background: var(--whatsapp-hover);
+            transform: scale(1.04);
+            box-shadow: 0 6px 20px -6px rgba(37, 211, 102, 0.40);
+        }
+
+        .whatsapp-direct .btn-whatsapp-direct i {
+            font-size: 1.2rem;
+        }
+
+        .whatsapp-direct p {
+            margin: 8px 0 0;
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .page-shell {
+                padding: 30px 24px 40px;
+            }
+
+            .page-grid {
+                grid-template-columns: 240px 1fr;
+                gap: 28px;
+            }
+
+            .content-card h1 {
+                font-size: 2rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-shell {
+                padding: 20px 16px 32px;
+            }
+
+            .page-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            .sidebar-card {
+                padding: 20px 16px;
+            }
+
+            .sidebar-card .sidebar-avatar {
+                width: 64px;
+                height: 64px;
+                font-size: 2rem;
+            }
+
+            .content-card {
+                padding: 24px 20px;
+            }
+
+            .content-card h1 {
+                font-size: 1.6rem;
+            }
+
+            .content-card .subtitle {
+                font-size: 0.95rem;
+            }
+
+            .contact-form .form-row {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .contact-info .info-card p {
+                margin-left: 0;
+                margin-top: 4px;
+            }
+
+            .whatsapp-direct .btn-whatsapp-direct {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-shell {
+                padding: 16px 12px 24px;
+            }
+
+            .content-card {
+                padding: 18px 14px;
+            }
+
+            .content-card h1 {
+                font-size: 1.3rem;
+            }
+
+            .contact-info .info-card {
+                padding: 14px 16px;
+            }
+
+            .whatsapp-direct {
+                padding: 16px;
+            }
+
+            .top-banner {
+                font-size: 0.8rem;
+                padding: 8px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== TOP BANNER ===== -->
+    <div class="top-banner">
+        <i class="fas fa-bullhorn"></i>
+        Welcome to Cyber School Experience Community —
+        <a href="/pages/chats/">Join your class WhatsApp group</a>
+        <i class="fas fa-arrow-right" style="margin-left: 6px;"></i>
+    </div>
+
+    <!-- ===== HEADER ===== -->
+    <div data-include="/components/header.html"></div>
+
+    <!-- ===== MAIN ===== -->
+    <main class="page-shell page-grid">
+        
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar">
+            <div class="sidebar-card glass-card">
+                <div class="sidebar-avatar"><i class="fab fa-whatsapp"></i></div>
+                <h3>Contact</h3>
+                <div class="sidebar-role">Get in Touch</div>
+                <div class="sidebar-bio">
+                    Have questions, feedback, or suggestions? We'd love to hear from you.
+                </div>
+                <div class="sidebar-divider"></div>
+                <div class="sidebar-links">
+                    <a href="index.html" class="active">
+                        <i class="fas fa-envelope"></i> Contact
+                    </a>
+                    <a href="/pages/about/">
+                        <i class="fas fa-info-circle"></i> About
+                    </a>
+                    <a href="/pages/about/faq/">
+                        <i class="fas fa-question-circle"></i> FAQ
+                    </a>
+                    <a href="/pages/chats/">
+                        <i class="fab fa-whatsapp"></i> Join a Chat
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ===== CONTENT ===== -->
+        <section class="content-card">
+            <div class="page-header-simple">
+                <span class="badge"><i class="fab fa-whatsapp"></i> Get in Touch</span>
+                <h1><i class="fab fa-whatsapp"></i>Contact Us</h1>
+                <p class="subtitle">We're here to help! Fill out the form and we'll get back to you via WhatsApp.</p>
+            </div>
+
+            <p>
+                Have a question about joining a group, accessing resources, or anything else? 
+                Fill out the form below and we'll get back to you on WhatsApp as soon as possible.
+            </p>
+
+            <!-- ===== CONTACT GRID ===== -->
+            <div class="contact-grid">
+                
+                <!-- ===== FORM ===== -->
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name <span class="required">*</span></label>
+                            <input type="text" id="name" placeholder="Your full name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="you@example.com (optional)" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject <span class="required">*</span></label>
+                        <select id="subject" required>
+                            <option value="">Select a subject...</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="group">WhatsApp Group Issue</option>
+                            <option value="resources">Study Resources</option>
+                            <option value="feedback">Feedback / Suggestion</option>
+                            <option value="technical">Technical Support</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message <span class="required">*</span></label>
+                        <textarea id="message" placeholder="Tell us how we can help you..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit" id="submitBtn">
+                        <i class="fab fa-whatsapp"></i> Send via WhatsApp
+                    </button>
+                    
+                    <div id="formStatus" style="margin-top:8px;font-size:0.9rem;text-align:center;"></div>
+                </form>
+
+                <!-- ===== CONTACT INFO ===== -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-header">
+                            <i class="fab fa-whatsapp whatsapp-icon"></i>
+                            <h4>WhatsApp Response</h4>
+                        </div>
+                        <p>
+                            We respond to all messages within <strong>1-2 hours</strong> during support hours.
+                            Your message will be sent directly to our team.
+                        </p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-header">
+                            <i class="fas fa-envelope email-icon"></i>
+                            <h4>Email</h4>
+                        </div>
+                        <p>
+                            <a href="mailto:cyberschoolexperience@gmail.com">cyberschoolexperience@gmail.com</a>
+                        </p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-header">
+                            <i class="fas fa-reply-all reply-icon"></i>
+                            <h4>Quick Response</h4>
+                        </div>
+                        <p>
+                            For urgent questions, reach out directly in your WhatsApp group.
+                            Moderators are available to help.
+                        </p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-header">
+                            <i class="fas fa-clock clock-icon"></i>
+                            <h4>Support Hours</h4>
+                        </div>
+                        <p>
+                            Monday - Friday: 8:00 AM - 8:00 PM<br />
+                            Saturday: 9:00 AM - 5:00 PM<br />
+                            Sunday: Closed
+                        </p>
+                    </div>
+
+                    <!-- ===== WHATSAPP DIRECT BUTTON ===== -->
+                    <div class="whatsapp-direct">
+                        <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:4px;">
+                            <i class="fab fa-whatsapp" style="font-size:1.4rem;color:var(--whatsapp);"></i>
+                            <span style="font-weight:600;color:var(--text-primary);">Chat with us directly</span>
+                        </div>
+                        <a href="https://wa.me/2348012345678" target="_blank" class="btn-whatsapp-direct">
+                            <i class="fab fa-whatsapp"></i> Open WhatsApp
+                        </a>
+                        <p>Click to start a conversation instantly</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <div data-include="/components/footer.html"></div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="/assets/js/include.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+    <script>
+        (function() {
+            'use strict';
+
+            // ===== SIDEBAR NAVIGATION =====
+            const sidebarLinks = document.querySelectorAll('.sidebar-links a');
+            
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    sidebarLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // ===== HIGHLIGHT ACTIVE PAGE =====
+            const currentPath = window.location.pathname;
+            const pageName = currentPath.split('/').pop() || 'index.html';
+            
+            sidebarLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === pageName || (pageName === 'index.html' && href === 'index.html')) {
+                    link.classList.add('active');
+                }
+            });
+
+            // ===== WHATSAPP DIRECT FORM =====
+            const form = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const formStatus = document.getElementById('formStatus');
+
+            // Update WhatsApp number here
+            const WHATSAPP_NUMBER = '256726863281'; // Replace with your number
+
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+
+                    const name = document.getElementById('name').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const subject = document.getElementById('subject').value;
+                    const message = document.getElementById('message').value.trim();
+
+                    // Validate
+                    if (!name || !subject || !message) {
+                        showToast('⚠️ Please fill in all required fields.', 'error');
+                        formStatus.innerHTML = '⚠️ Please fill in all required fields.';
+                        formStatus.style.color = '#ef4444';
+                        return;
+                    }
+
+                    // Build WhatsApp message
+                    let whatsappMessage = `📩 *New Contact Form Submission*\n\n`;
+                    whatsappMessage += `*Name:* ${name}\n`;
+                    if (email) {
+                        whatsappMessage += `*Email:* ${email}\n`;
+                    }
+                    whatsappMessage += `*Subject:* ${subject}\n\n`;
+                    whatsappMessage += `*Message:*\n${message}\n\n`;
+                    whatsappMessage += `— From Cyber School Experience`;
+
+                    // Encode for URL
+                    const encodedMessage = encodeURIComponent(whatsappMessage);
+                    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+
+                    // Show loading state
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Opening WhatsApp...';
+                    formStatus.innerHTML = '📱 Opening WhatsApp...';
+                    formStatus.style.color = 'var(--text-secondary)';
+
+                    // Open WhatsApp
+                    const newWindow = window.open(whatsappUrl, '_blank');
+
+                    // Handle popup blockers
+                    if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
+                        window.location.href = whatsappUrl;
+                    }
+
+                    // Reset form after delay
+                    setTimeout(() => {
+                        form.reset();
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = '<i class="fab fa-whatsapp"></i> Send via WhatsApp';
+                        formStatus.innerHTML = '✅ Message prepared! Check WhatsApp to send.';
+                        formStatus.style.color = '#10b981';
+                        
+                        setTimeout(() => {
+                            if (formStatus.innerHTML.includes('prepared')) {
+                                formStatus.innerHTML = '';
+                            }
+                        }, 6000);
+                    }, 2000);
+                });
+            }
+
+            // ===== TOAST NOTIFICATION =====
+            function showToast(message, type = 'info') {
+                const existingToast = document.querySelector('.toast-notification');
+                if (existingToast) existingToast.remove();
+
+                const toast = document.createElement('div');
+                toast.className = 'toast-notification';
+                const bgColor = type === 'success' ? '#10b981' : type === 'error' ? '#ef4444' : '#3b82f6';
+                toast.style.cssText = `
+                    position: fixed;
+                    bottom: 24px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    padding: 12px 24px;
+                    border-radius: 12px;
+                    background: ${bgColor};
+                    color: #fff;
+                    font-weight: 500;
+                    font-size: 0.9rem;
+                    box-shadow: 0 8px 24px rgba(0,0,0,0.20);
+                    z-index: 9999;
+                    opacity: 0;
+                    transition: opacity 0.3s ease, transform 0.3s ease;
+                    transform: translateX(-50%) translateY(20px);
+                    font-family: 'Inter', sans-serif;
+                    max-width: 90%;
+                `;
+                toast.textContent = message;
+                document.body.appendChild(toast);
+
+                requestAnimationFrame(() => {
+                    toast.style.opacity = '1';
+                    toast.style.transform = 'translateX(-50%) translateY(0)';
+                });
+
+                setTimeout(() => {
+                    toast.style.opacity = '0';
+                    toast.style.transform = 'translateX(-50%) translateY(20px)';
+                    setTimeout(() => {
+                        if (toast.parentNode) toast.remove();
+                    }, 300);
+                }, 4000);
+            }
+
+            console.log('📧 Contact page loaded - WhatsApp Direct');
+        })();
+    </script>
+
+</body>
+</html>

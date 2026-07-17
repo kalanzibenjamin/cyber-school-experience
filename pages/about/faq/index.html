@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ - Cyber School Experience</title>
+    <meta http-equiv="refresh" content="0; url=/pages/about/index.html#faq" />
+    <script>window.location.replace('/pages/about/index.html#faq');</script>
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    
+    <style>
+        /* ============================================================
+           FAQ PAGE STYLES
+           ============================================================ */
+        
+        /* ----- TOP BANNER ----- */
+        .top-banner {
+            background: var(--banner-bg);
+            color: var(--banner-text);
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.2px;
+            border-bottom: 2px solid var(--whatsapp);
+            position: relative;
+            z-index: 20;
+        }
+
+        .top-banner a {
+            color: var(--banner-link);
+            font-weight: 600;
+            margin: 0 4px;
+            border-bottom: 1px dotted rgba(139, 184, 255, 0.4);
+            transition: color var(--transition);
+        }
+
+        .top-banner a:hover {
+            color: var(--text-inverse);
+        }
+
+        /* ----- PAGE SHELL ----- */
+        .page-shell {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 40px 40px 60px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .page-grid {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        /* ----- SIDEBAR ----- */
+        .sidebar {
+            position: sticky;
+            top: 100px;
+        }
+
+        .sidebar-card {
+            background: var(--surface-glass);
+            border-radius: var(--radius);
+            border: 1px solid var(--border-glass);
+            padding: 28px 24px;
+            backdrop-filter: blur(12px) saturate(140%);
+            -webkit-backdrop-filter: blur(12px) saturate(140%);
+            box-shadow: 0 20px 45px -28px rgba(15, 23, 42, 0.35);
+        }
+
+        .sidebar-card .sidebar-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), #4f8ff7);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin: 0 auto 16px;
+            box-shadow: 0 12px 30px -16px rgba(42, 125, 225, 0.45);
+        }
+
+        .sidebar-card h3 {
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .sidebar-card .sidebar-role {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 16px;
+        }
+
+        .sidebar-card .sidebar-bio {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .sidebar-card .sidebar-divider {
+            height: 1px;
+            background: var(--border-glass);
+            margin: 16px 0;
+        }
+
+        .sidebar-card .sidebar-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .sidebar-card .sidebar-links a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all var(--transition);
+        }
+
+        .sidebar-card .sidebar-links a:hover {
+            background: var(--accent-soft);
+            color: var(--accent);
+            transform: translateX(2px);
+        }
+
+        .sidebar-card .sidebar-links a:hover i {
+            color: var(--accent);
+        }
+
+        .sidebar-card .sidebar-links a.active {
+            background: var(--accent-soft);
+            color: var(--accent);
+            box-shadow: inset 0 0 0 1px rgba(42, 125, 225, 0.16);
+        }
+
+        .sidebar-card .sidebar-links a.active i {
+            color: var(--accent);
+        }
+
+        .sidebar-card .sidebar-links a i {
+            width: 20px;
+            color: var(--text-light);
+            transition: color var(--transition);
+        }
+
+        /* ----- CONTENT CARD ----- */
+        .content-card {
+            background: var(--surface-glass);
+            border-radius: var(--radius);
+            border: 1px solid var(--border-glass);
+            padding: 40px 44px;
+            backdrop-filter: blur(12px) saturate(140%);
+            -webkit-backdrop-filter: blur(12px) saturate(140%);
+        }
+
+        .content-card .page-header-simple {
+            margin-bottom: 28px;
+        }
+
+        .content-card .page-header-simple .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent-soft);
+            padding: 4px 16px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: var(--accent);
+            border: 1px solid var(--badge-border);
+            margin-bottom: 12px;
+        }
+
+        .content-card h1 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+
+        .content-card h1 i {
+            color: var(--accent);
+            margin-right: 10px;
+        }
+
+        .content-card .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        /* ----- FAQ CATEGORY ----- */
+        .faq-category {
+            margin-bottom: 32px;
+        }
+
+        .faq-category:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-category .category-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--border-glass);
+        }
+
+        .faq-category .category-title i {
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+
+        /* ----- FAQ ITEMS ----- */
+        .faq-item {
+            border: 1px solid var(--border-glass);
+            border-radius: 12px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            transition: all var(--transition);
+            background: var(--surface);
+        }
+
+        .faq-item:hover {
+            border-color: var(--accent);
+        }
+
+        .faq-item .faq-question {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 16px 20px;
+            cursor: pointer;
+            transition: all var(--transition);
+            user-select: none;
+            background: transparent;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-family: inherit;
+            font-size: inherit;
+            color: var(--text-primary);
+        }
+
+        .faq-item .faq-question:hover {
+            background: var(--accent-soft);
+        }
+
+        .faq-item .faq-question .q-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .faq-item .faq-question .q-label .q-icon {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--accent-soft);
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: 700;
+        }
+
+        .faq-item .faq-question .q-label span {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+        }
+
+        .faq-item .faq-question .toggle-icon {
+            flex-shrink: 0;
+            color: var(--text-light);
+            transition: transform var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .faq-item.open .faq-question .toggle-icon {
+            transform: rotate(180deg);
+            color: var(--accent);
+        }
+
+        .faq-item .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, padding 0.35s ease;
+            padding: 0 20px;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 500px;
+            padding: 0 20px 18px;
+        }
+
+        .faq-item .faq-answer p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .faq-item .faq-answer ul {
+            margin: 8px 0 0 20px;
+            padding: 0;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .faq-item .faq-answer ul li {
+            margin-bottom: 4px;
+        }
+
+        .faq-item .faq-answer a {
+            color: var(--accent);
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .faq-item .faq-answer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ----- CONTACT SECTION ----- */
+        .contact-section {
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-glass);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .contact-section p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .contact-section .btn-contact {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 24px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            background: var(--accent);
+            color: #fff;
+            text-decoration: none;
+            transition: all var(--transition);
+            box-shadow: 0 4px 12px -4px rgba(42, 125, 225, 0.30);
+        }
+
+        .contact-section .btn-contact:hover {
+            background: var(--accent-hover);
+            transform: scale(1.02);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .page-shell {
+                padding: 30px 24px 40px;
+            }
+
+            .page-grid {
+                grid-template-columns: 240px 1fr;
+                gap: 28px;
+            }
+
+            .content-card h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-shell {
+                padding: 20px 16px 32px;
+            }
+
+            .page-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            .sidebar-card {
+                padding: 20px 16px;
+            }
+
+            .sidebar-card .sidebar-avatar {
+                width: 64px;
+                height: 64px;
+                font-size: 2rem;
+            }
+
+            .content-card {
+                padding: 24px 20px;
+            }
+
+            .content-card h1 {
+                font-size: 1.6rem;
+            }
+
+            .content-card .subtitle {
+                font-size: 0.95rem;
+            }
+
+            .faq-item .faq-question {
+                padding: 14px 16px;
+            }
+
+            .faq-item .faq-question .q-label span {
+                font-size: 0.9rem;
+            }
+
+            .faq-item .faq-answer p,
+            .faq-item .faq-answer ul {
+                font-size: 0.9rem;
+            }
+
+            .contact-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .contact-section .btn-contact {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-shell {
+                padding: 16px 12px 24px;
+            }
+
+            .content-card {
+                padding: 18px 14px;
+            }
+
+            .content-card h1 {
+                font-size: 1.3rem;
+            }
+
+            .faq-item .faq-question {
+                padding: 12px 14px;
+            }
+
+            .faq-item .faq-question .q-label .q-icon {
+                width: 24px;
+                height: 24px;
+                font-size: 0.6rem;
+            }
+
+            .faq-item .faq-question .q-label span {
+                font-size: 0.85rem;
+            }
+
+            .faq-item .faq-answer {
+                padding: 0 14px;
+            }
+
+            .faq-item.open .faq-answer {
+                padding: 0 14px 14px;
+            }
+
+            .top-banner {
+                font-size: 0.8rem;
+                padding: 8px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== TOP BANNER ===== -->
+    <div class="top-banner">
+        <i class="fas fa-bullhorn"></i>
+        Welcome to Cyber School Experience Community —
+        <a href="/pages/chats/">Join your class WhatsApp group</a>
+        <i class="fas fa-arrow-right" style="margin-left: 6px;"></i>
+    </div>
+
+    <!-- ===== HEADER ===== -->
+    <div data-include="/components/header.html"></div>
+
+    <!-- ===== MAIN ===== -->
+    <main class="page-shell page-grid">
+        
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar">
+            <div class="sidebar-card glass-card">
+                <div class="sidebar-avatar">?</div>
+                <h3>FAQ</h3>
+                <div class="sidebar-role">Frequently Asked Questions</div>
+                <div class="sidebar-bio">
+                    Quick answers to the most common questions about Cyber School Experience.
+                </div>
+                <div class="sidebar-divider"></div>
+                <div class="sidebar-links">
+                    <a href="index.html" class="active">
+                        <i class="fas fa-question-circle"></i> FAQ
+                    </a>
+                    <a href="/pages/about/">
+                        <i class="fas fa-info-circle"></i> About
+                    </a>
+                    <a href="/pages/chats/">
+                        <i class="fab fa-whatsapp"></i> Join a Chat
+                    </a>
+                    <a href="/pages/about/contact/">
+                        <i class="fas fa-envelope"></i> Contact
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ===== CONTENT ===== -->
+        <section class="content-card">
+            <div class="page-header-simple">
+                <span class="badge"><i class="fas fa-question-circle"></i> Got Questions?</span>
+                <h1><i class="fas fa-question-circle"></i>Frequently Asked Questions</h1>
+                <p class="subtitle">Everything you need to know about Cyber School Experience — from joining groups to accessing resources.</p>
+            </div>
+
+            <!-- ===== CATEGORY: Getting Started ===== -->
+            <div class="faq-category">
+                <div class="category-title">
+                    <i class="fas fa-rocket"></i>
+                    Getting Started
+                </div>
+
+                <div class="faq-item open">
+                    <button class="faq-question" aria-expanded="true">
+                        <span class="q-label">
+                            <span class="q-icon">Q</span>
+                            <span>What is Cyber School Experience?</span>
+                        </span>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Cyber School Experience is a student-powered learning community for Nursing (CN) and Midwifery (CM) students. We provide a central platform for study materials, academic updates, WhatsApp group connections, and peer support.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="q-label">
+                            <span class="q-icon">Q</span>
+                            <span>How do I join a WhatsApp group?</span>
+                        </span>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Visit our <a href="/pages/chats/">Chats page</a>, find your class group, and click the "Join Group" button. You'll be redirected to WhatsApp where you can join the group directly.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="q-label">
+                            <span class="q-icon">Q</span>
+                            <span>Is Cyber School Experience free?</span>
+                        </span>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! Cyber School Experience is completely free for all Nursing and Midwifery students. We believe in accessible education for everyone.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== CATEGORY: Academics ===== -->
+            <div class="faq-category">
+                <div class="category-title">
+                    <i class="fas fa-graduation-cap"></i>
+                    Academics &amp; Resources
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="q-label">
+                            <span class="q-icon">Q</span>
+                            <span>What study materials are available?</span>
+                        </span>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We provide a variety of resources including:</p>
+                        <ul>
+                            <li>Lecture notes and summaries</li>
+                            <li>Past exam papers with solutions</li>
+                            <li>Practice questions and quizzes</li>
+                            <li>Clinical study guides</li>
+                            <li>Recommended reading lists</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="q-label">
+                            <span class="q-icon">Q</span>
+                            <span>How do I get exam updates?</span>
+                        </span>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>All exam-related announcements are posted on our <a href="/pages/announcements/">Announcements page</a> and shared in the relevant WhatsApp groups. Make sure you're in your class group to receive timely updates.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="q-label">
+                            <span class="q-icon">Q</span>
+                            <span>Are there study groups I can join?</span>
+                        </span>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! We have weekly study groups for various subjects. Check the <a href="/pages/announcements/">Announcements page</a> for upcoming study sessions or ask in your WhatsApp group for study partners.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== CATEGORY: Community ===== -->
+            <div class="faq-category">
+                <div class="category-title">
+                    <i class="fas fa-users"></i>
+                    Community &amp; Support
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="q-label">
+                            <span class="q-icon">Q</span>
+                            <span>Who can join Cyber School Experience?</span>
+                        </span>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Cyber School Experience is open to all current students enrolled in Nursing (CN) and Midwifery (CM) certificate programs. Alumni are also welcome to stay connected and mentor current students.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="q-label">
+                            <span class="q-icon">Q</span>
+                            <span>How can I contribute to the community?</span>
+                        </span>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>There are many ways to contribute:</p>
+                        <ul>
+                            <li>Share study materials and notes</li>
+                            <li>Answer questions in WhatsApp groups</li>
+                            <li>Lead study sessions</li>
+                            <li>Become a group moderator</li>
+                            <li>Share feedback and suggestions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="q-label">
+                            <span class="q-icon">Q</span>
+                            <span>What are the community guidelines?</span>
+                        </span>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We maintain a respectful and inclusive environment. Key guidelines include:</p>
+                        <ul>
+                            <li>Be respectful and kind to all members</li>
+                            <li>Share helpful and relevant content</li>
+                            <li>Protect everyone's privacy</li>
+                            <li>No spam or promotional content</li>
+                            <li>Report issues to moderators</li>
+                        </ul>
+                        <p>Read the full <a href="/pages/chats/guidelines.html">Chat Guidelines</a> for more details.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== CATEGORY: Technical ===== -->
+            <div class="faq-category">
+                <div class="category-title">
+                    <i class="fas fa-cog"></i>
+                    Technical Support
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="q-label">
+                            <span class="q-icon">Q</span>
+                            <span>I can't join a WhatsApp group. What should I do?</span>
+                        </span>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>If you're having trouble joining a group:</p>
+                        <ul>
+                            <li>Make sure you have WhatsApp installed</li>
+                            <li>Check that the link hasn't expired</li>
+                            <li>Try opening the link in your browser first</li>
+                            <li>Contact a moderator for a new link</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="q-label">
+                            <span class="q-icon">Q</span>
+                            <span>How do I report a problem?</span>
+                        </span>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You can report any issues to your group moderators or contact us through the <a href="/pages/about/contact/">Contact page</a>. We'll get back to you as soon as possible.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== CONTACT SECTION ===== -->
+            <div class="contact-section">
+                <p><strong>Still have questions?</strong> We're here to help!</p>
+                <a href="/pages/about/contact/" class="btn-contact">
+                    <i class="fas fa-envelope"></i> Contact Us
+                </a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <div data-include="/components/footer.html"></div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="/assets/js/include.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+    <script>
+        (function() {
+            'use strict';
+
+            // ===== FAQ ACCORDION =====
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', function() {
+                    const isOpen = item.classList.contains('open');
+                    
+                    // Close all items
+                    faqItems.forEach(other => {
+                        if (other !== item && other.classList.contains('open')) {
+                            other.classList.remove('open');
+                            other.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    if (isOpen) {
+                        item.classList.remove('open');
+                        this.setAttribute('aria-expanded', 'false');
+                    } else {
+                        item.classList.add('open');
+                        this.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            });
+
+            // ===== SIDEBAR NAVIGATION =====
+            const sidebarLinks = document.querySelectorAll('.sidebar-links a');
+            
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    sidebarLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // ===== HIGHLIGHT ACTIVE PAGE =====
+            const currentPath = window.location.pathname;
+            const pageName = currentPath.split('/').pop() || 'index.html';
+            
+            sidebarLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === pageName || (pageName === 'index.html' && href === 'index.html')) {
+                    link.classList.add('active');
+                }
+            });
+
+            console.log('❓ FAQ page loaded');
+        })();
+    </script>
+
+</body>
+</html>
